@@ -1,0 +1,27 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir D:/HWSW/hls_component/stream_matmul 
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/HWSW/hls_component/stream_matmul/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'D:/HWSW/hls_component/stream_matmul'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file D:/HWSW/hls_component/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../stream_matmul.cpp' from D:/HWSW/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'D:/HWSW/stream_matmul.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../tb_stream_matmul.cpp' from D:/HWSW/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'D:/HWSW/tb_stream_matmul.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=stream_matmul' from D:/HWSW/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from D:/HWSW/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z010clg400-1' from D:/HWSW/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from D:/HWSW/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/HWSW/hls_component/stream_matmul/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.912 seconds; current allocated memory: 147.734 MB.
+INFO: [HLS 200-10] Analyzing design file '../stream_matmul.cpp' ... 
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (:0)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 2 seconds. Elapsed time: 8.867 seconds; current allocated memory: 150.191 MB.
+ERROR: [HLS 214-157] Top function not found: there is no function named 'stream_matmul'
+error: Top function not found: there is no function named 'stream_matmul'
+ERROR: Error in opt
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 3 seconds. Total elapsed time: 15.463 seconds; peak allocated memory: 150.480 MB.

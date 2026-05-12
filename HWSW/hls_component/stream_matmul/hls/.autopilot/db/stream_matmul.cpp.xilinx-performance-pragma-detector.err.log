@@ -1,0 +1,4 @@
+In file included from D:\HWSW\hls_component\..\stream_matmul.cpp:2:
+D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:17:10: fatal error: 'cassert' file not found
+#include <cassert>
+         ^~~~~~~~~

@@ -1,0 +1,245 @@
+<ENTRY>
+{
+ "thisFile": "D:/HWSW\\hls_component\\stream_matmul\\stream_matmul.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "05/12/26 13:32:54",
+ "timestampMillis": "1778589174787",
+ "buildStep": {
+  "cmdId": "82338e4a-ca8d-499d-a68f-757bb914a251",
+  "name": "v++",
+  "logFile": "D:/HWSW\\hls_component\\stream_matmul\\logs\\stream_matmul.steps.log",
+  "commandLine": "D:/2025.1/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config D:\\HWSW\\hls_component\\hls_config.cfg --work_dir stream_matmul ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "D:\\HWSW\\hls_component\\hls_config.cfg",
+   "--work_dir",
+   "stream_matmul"
+  ],
+  "iniFiles": [
+   {
+    "path": "D:/HWSW\\hls_component\\hls_config.cfg",
+    "content": "part=xc7z010clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=stream_matmul\ntb.file=../tb_stream_matmul.cpp\nsyn.file=../stream_matmul.cpp"
+   }
+  ],
+  "cwd": "D:\\HWSW\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/12/26 13:32:54",
+ "timestampMillis": "1778589174787",
+ "status": {
+  "cmdId": "82338e4a-ca8d-499d-a68f-757bb914a251",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "05/12/26 13:32:58",
+ "timestampMillis": "1778589178582",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stream_matmul",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/HWSW\\stream_matmul.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "05/12/26 13:32:58",
+ "timestampMillis": "1778589178583",
+ "buildStep": {
+  "cmdId": "7ca25afb-a008-49af-8e41-35f1dc27548c",
+  "name": "",
+  "logFile": "D:/HWSW\\hls_component\\stream_matmul\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\HWSW\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/12/26 13:32:58",
+ "timestampMillis": "1778589178583",
+ "status": {
+  "cmdId": "7ca25afb-a008-49af-8e41-35f1dc27548c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:32:58",
+ "timestampMillis": "1778589178583",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:32:58",
+ "timestampMillis": "1778589178583",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:32:58",
+ "timestampMillis": "1778589178584",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206335",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206335",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206336",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206336",
+ "status": {
+  "cmdId": "7ca25afb-a008-49af-8e41-35f1dc27548c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206433",
+ "status": {
+  "cmdId": "82338e4a-ca8d-499d-a68f-757bb914a251",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206475",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\reports\\v++_compile_stream_matmul_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/12/26 13:33:26",
+ "timestampMillis": "1778589206476",
+ "report": {
+  "path": "D:/HWSW\\hls_component\\stream_matmul\\reports\\.db\\v++_compile_stream_matmul_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

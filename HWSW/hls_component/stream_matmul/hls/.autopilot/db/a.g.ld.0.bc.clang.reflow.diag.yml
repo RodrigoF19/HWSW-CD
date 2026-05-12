@@ -1,0 +1,159 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 102, Column: 30 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - Callee:          'float_to_axis(float, bool)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 24, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 69, Column: 12 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - Callee:          'axis_to_float(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_87_10
+  - String:          ''' ('
+  - LoopLoc:         '../stream_matmul.cpp:87:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          stream_matmul
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '4'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 69, Column: 12 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - Callee:          'axis_to_float(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 102, Column: 30 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - Callee:          'float_to_axis(float, bool)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 24, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_stream_matmul_ir
+Args:            
+  - Callee:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_stream_matmul_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'axis_to_float(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 17, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float_to_axis(float, bool)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 24, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: ../stream_matmul.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 45, Column: 8 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../stream_matmul.cpp, Line: 46, Column: 11 }
+Function:        _Z13stream_matmulRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          B
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_87_10
+  - String:          '> at '
+  - LoopLoc:         '../stream_matmul.cpp:87:35'
+  - String:          ' '
+...

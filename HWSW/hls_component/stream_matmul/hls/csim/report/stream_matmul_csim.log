@@ -1,0 +1,51 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../tb_stream_matmul.cpp in debug mode
+   Compiling ../../../../../stream_matmul.cpp in debug mode
+   Generating csim.exe
+
+Running test case: Identity A: C should equal B
+Testing output tile (0,0)
+Testing output tile (0,1)
+Testing output tile (1,0)
+Testing output tile (1,1)
+Testing output tile (2,3)
+Testing output tile (3,2)
+Testing output tile (3,3)
+Test case: Identity A: C should equal B
+Max error = 0.000000
+MSE       = 0.000000
+Result: PASSED
+
+Running test case: All ones: every C element should equal N
+Testing output tile (0,0)
+Testing output tile (0,1)
+Testing output tile (1,0)
+Testing output tile (1,1)
+Testing output tile (2,3)
+Testing output tile (3,2)
+Testing output tile (3,3)
+Test case: All ones: every C element should equal N
+Max error = 0.000000
+MSE       = 0.000000
+Result: PASSED
+
+Running test case: Random matrices in [0,1]
+Testing output tile (0,0)
+Testing output tile (0,1)
+Testing output tile (1,0)
+Testing output tile (1,1)
+Testing output tile (2,3)
+Testing output tile (3,2)
+Testing output tile (3,3)
+Test case: Random matrices in [0,1]
+Max error = 0.000000
+MSE       = 0.000000
+Result: PASSED
+
+====================================
+ALL TESTS PASSED
+====================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2048
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

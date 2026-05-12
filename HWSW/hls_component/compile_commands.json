@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/home/public/Desktop/paulo/HWSW/hls_component",
+    "arguments": [
+      "/opt/Xilinx/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/2025.1/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=stream_matmul",
+      "-c",
+      "/home/public/Desktop/paulo/HWSW/hls_component/../stream_matmul.cpp"
+    ],
+    "file": "/home/public/Desktop/paulo/HWSW/hls_component/../stream_matmul.cpp"
+  },
+  {
+    "directory": "/home/public/Desktop/paulo/HWSW/hls_component",
+    "arguments": [
+      "/opt/Xilinx/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/opt/Xilinx/2025.1/Vitis/include",
+      "-c",
+      "/home/public/Desktop/paulo/HWSW/hls_component/../tb_stream_matmul.cpp"
+    ],
+    "file": "/home/public/Desktop/paulo/HWSW/hls_component/../tb_stream_matmul.cpp"
+  }
+]
