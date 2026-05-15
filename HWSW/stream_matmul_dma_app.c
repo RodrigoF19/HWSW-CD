@@ -16,11 +16,15 @@
  * If your HLS IP was synthesized with N = 64 and TILE = 16,
  * keep these values exactly the same here.
  */
-#define N 64
 #define TILE 16
-#define NUM_K_TILES   (N / TILE)
-#define NUM_TILE_ROWS (N / TILE)
-#define NUM_TILE_COLS (N / TILE)
+
+#define MAX_N 1024
+#define MAX_K_TILES   (MAX_N / TILE)
+#define MAX_TILE_ROWS (MAX_N / TILE)
+#define MAX_TILE_COLS (MAX_N / TILE)
+
+/* Tamanho que queres testar agora */
+static int N_runtime = 64;
 
 /*
  * For one output tile:
@@ -54,13 +58,13 @@
  * For N = 64 this is small enough.
  * For N = 1024, make sure these arrays are placed in DDR, not OCM.
  */
-static float A[N * N]       __attribute__((aligned(64)));
-static float B[N * N]       __attribute__((aligned(64)));
-static float C_ref[N * N]   __attribute__((aligned(64)));
-static float C_hw[N * N]    __attribute__((aligned(64)));
+static float A[MAX_N * MAX_N]     __attribute__((aligned(64)));
+static float B[MAX_N * MAX_N]     __attribute__((aligned(64)));
+static float C_ref[MAX_N * MAX_N] __attribute__((aligned(64)));
+static float C_hw[MAX_N * MAX_N]  __attribute__((aligned(64)));
 
-static float input_buffer[INPUT_WORDS_PER_TILE]   __attribute__((aligned(64)));
-static float output_buffer[OUTPUT_WORDS_PER_TILE] __attribute__((aligned(64)));
+static float input_buffer[MAX_K_TILES * 2 * TILE * TILE] __attribute__((aligned(64)));
+static float output_buffer[TILE * TILE]                  __attribute__((aligned(64)));
 
 static XAxiDma AxiDma;
 static XStream_matmul MatmulIp;
@@ -286,13 +290,16 @@ static int run_hardware_tile(int tile_row, int tile_col)
     return XST_SUCCESS;
 }
 
-static int run_hardware_full_matrix(void)
+static int run_hardware_full_matrix()
 {
     int tile_row, tile_col;
     int status;
 
-    for (tile_row = 0; tile_row < NUM_TILE_ROWS; tile_row++) {
-        for (tile_col = 0; tile_col < NUM_TILE_COLS; tile_col++) {
+    int num_tile_rows = N_runtime / TILE;
+    int num_tile_cols = N_runtime / TILE;
+
+    for (tile_row = 0; tile_row < num_tile_rows; tile_row++) {
+        for (tile_col = 0; tile_col < num_tile_cols; tile_col++) {
 
             printf("Running HW tile (%d,%d)\n", tile_row, tile_col);
 

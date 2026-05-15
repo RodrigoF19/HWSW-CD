@@ -36,8 +36,11 @@ static axis_t float_to_axis(float x, bool last)
 }
 
 void stream_matmul(hls::stream<axis_t> &in_stream,
-                   hls::stream<axis_t> &out_stream)
+                   hls::stream<axis_t> &out_stream,
+                   int num_k_tiles)
 {
+
+#pragma HLS INTERFACE s_axilite port=num_k_tiles bundle=control 
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
 #pragma HLS INTERFACE s_axilite port=return bundle=control
@@ -58,7 +61,7 @@ void stream_matmul(hls::stream<axis_t> &in_stream,
         }
     }
 
-    for (kk = 0; kk < NUM_K_TILES; kk++) {
+    for (kk = 0; kk < num_k_tiles; kk++) {
 
         for (i = 0; i < TILE; i++) {
             for (j = 0; j < TILE; j++) {
