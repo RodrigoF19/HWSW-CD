@@ -16,15 +16,11 @@
  * If your HLS IP was synthesized with N = 64 and TILE = 16,
  * keep these values exactly the same here.
  */
+#define N 64
 #define TILE 16
-
-#define MAX_N 1024
-#define MAX_K_TILES   (MAX_N / TILE)
-#define MAX_TILE_ROWS (MAX_N / TILE)
-#define MAX_TILE_COLS (MAX_N / TILE)
-
-/* Tamanho que queres testar agora */
-static int N_runtime = 64;
+#define NUM_K_TILES   (N / TILE)
+#define NUM_TILE_ROWS (N / TILE)
+#define NUM_TILE_COLS (N / TILE)
 
 /*
  * For one output tile:
@@ -58,13 +54,13 @@ static int N_runtime = 64;
  * For N = 64 this is small enough.
  * For N = 1024, make sure these arrays are placed in DDR, not OCM.
  */
-static float A[MAX_N * MAX_N]     __attribute__((aligned(64)));
-static float B[MAX_N * MAX_N]     __attribute__((aligned(64)));
-static float C_ref[MAX_N * MAX_N] __attribute__((aligned(64)));
-static float C_hw[MAX_N * MAX_N]  __attribute__((aligned(64)));
+static float A[N * N]       __attribute__((aligned(64)));
+static float B[N * N]       __attribute__((aligned(64)));
+static float C_ref[N * N]   __attribute__((aligned(64)));
+static float C_hw[N * N]    __attribute__((aligned(64)));
 
-static float input_buffer[MAX_K_TILES * 2 * TILE * TILE] __attribute__((aligned(64)));
-static float output_buffer[TILE * TILE]                  __attribute__((aligned(64)));
+static float input_buffer[INPUT_WORDS_PER_TILE]   __attribute__((aligned(64)));
+static float output_buffer[OUTPUT_WORDS_PER_TILE] __attribute__((aligned(64)));
 
 static XAxiDma AxiDma;
 static XStream_matmul MatmulIp;
@@ -221,32 +217,10 @@ static int run_hardware_tile(int tile_row, int tile_col)
     int status;
     int i;
 
-    /*
-     * N_runtime é o tamanho da matriz que queres testar na aplicação.
-     * Exemplos:
-     *   N_runtime = 64;
-     *   N_runtime = 128;
-     *   N_runtime = 1024;
-     */
-    int num_k_tiles = N_runtime / TILE;
-
-    int input_words_per_tile  = num_k_tiles * 2 * TILE * TILE;
-    int output_words_per_tile = TILE * TILE;
-
-    int input_bytes_per_tile  = input_words_per_tile * sizeof(float);
-    int output_bytes_per_tile = output_words_per_tile * sizeof(float);
-
-    /*
-     * Prepara o input buffer com:
-     * A_tile, B_tile, A_tile, B_tile, ...
-     * para kk = 0 até num_k_tiles - 1.
-     *
-     * Esta função também tem de usar num_k_tiles e N_runtime.
-     */
-    prepare_input_tile(tile_row, tile_col, num_k_tiles);
+    prepare_input_tile(tile_row, tile_col);
 
     /* Clear output buffer before receiving new data. */
-    for (i = 0; i < output_words_per_tile; i++) {
+    for (i = 0; i < OUTPUT_WORDS_PER_TILE; i++) {
         output_buffer[i] = 0.0f;
     }
 
@@ -255,8 +229,8 @@ static int run_hardware_tile(int tile_row, int tile_col)
      * - Flush input buffer so DMA sees the latest CPU-written data.
      * - Flush output buffer before S2MM to avoid dirty cache lines.
      */
-    Xil_DCacheFlushRange((UINTPTR)input_buffer, input_bytes_per_tile);
-    Xil_DCacheFlushRange((UINTPTR)output_buffer, output_bytes_per_tile);
+    Xil_DCacheFlushRange((UINTPTR)input_buffer, INPUT_BYTES_PER_TILE);
+    Xil_DCacheFlushRange((UINTPTR)output_buffer, OUTPUT_BYTES_PER_TILE);
 
     /*
      * Start receive channel first.
@@ -264,22 +238,13 @@ static int run_hardware_tile(int tile_row, int tile_col)
      */
     status = XAxiDma_SimpleTransfer(&AxiDma,
                                     (UINTPTR)output_buffer,
-                                    output_bytes_per_tile,
+                                    OUTPUT_BYTES_PER_TILE,
                                     XAXIDMA_DEVICE_TO_DMA);
     if (status != XST_SUCCESS) {
         printf("ERROR: DMA S2MM transfer failed for tile (%d,%d)\n",
                tile_row, tile_col);
         return XST_FAILURE;
     }
-
-    /*
-     * Set the runtime number of k-tiles.
-     *
-     * This is the new AXI-Lite register generated from:
-     * int num_k_tiles
-     * in your HLS function.
-     */
-    XStream_matmul_Set_num_k_tiles(&MatmulIp, num_k_tiles);
 
     /*
      * Start the HLS IP.
@@ -293,7 +258,7 @@ static int run_hardware_tile(int tile_row, int tile_col)
      */
     status = XAxiDma_SimpleTransfer(&AxiDma,
                                     (UINTPTR)input_buffer,
-                                    input_bytes_per_tile,
+                                    INPUT_BYTES_PER_TILE,
                                     XAXIDMA_DMA_TO_DEVICE);
     if (status != XST_SUCCESS) {
         printf("ERROR: DMA MM2S transfer failed for tile (%d,%d)\n",
@@ -314,23 +279,20 @@ static int run_hardware_tile(int tile_row, int tile_col)
     while (!XStream_matmul_IsDone(&MatmulIp));
 
     /* Invalidate output cache so CPU reads the data written by DMA. */
-    Xil_DCacheInvalidateRange((UINTPTR)output_buffer, output_bytes_per_tile);
+    Xil_DCacheInvalidateRange((UINTPTR)output_buffer, OUTPUT_BYTES_PER_TILE);
 
     store_output_tile(tile_row, tile_col);
 
     return XST_SUCCESS;
 }
 
-static int run_hardware_full_matrix()
+static int run_hardware_full_matrix(void)
 {
     int tile_row, tile_col;
     int status;
 
-    int num_tile_rows = N_runtime / TILE;
-    int num_tile_cols = N_runtime / TILE;
-
-    for (tile_row = 0; tile_row < num_tile_rows; tile_row++) {
-        for (tile_col = 0; tile_col < num_tile_cols; tile_col++) {
+    for (tile_row = 0; tile_row < NUM_TILE_ROWS; tile_row++) {
+        for (tile_col = 0; tile_col < NUM_TILE_COLS; tile_col++) {
 
             printf("Running HW tile (%d,%d)\n", tile_row, tile_col);
 
