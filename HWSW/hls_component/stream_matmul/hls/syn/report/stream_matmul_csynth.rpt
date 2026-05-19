@@ -3,9 +3,9 @@
 ================================================================
 == Vitis HLS Report for 'stream_matmul'
 ================================================================
-* Date:           Tue May 12 13:33:24 2026
+* Date:           Tue May 19 02:23:57 2026
 
-* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        stream_matmul
 * Solution:       hls (Vivado IP Flow Target)
 * Product family: zynq
@@ -25,33 +25,33 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    88667|    88667|  0.887 ms|  0.887 ms|  88668|  88668|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+----------+-----------+-------+---------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max    |  min  |   max   |   Type  |
+    +---------+---------+----------+-----------+-------+---------+---------+
+    |    22559|  1410827|  0.226 ms|  14.108 ms|  22560|  1410828|       no|
+    +---------+---------+----------+-----------+-------+---------+---------+
 
     + Detail: 
         * Instance: 
-        +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
-        |                                                                                    |                                                                         |  Latency (cycles) |  Latency (absolute) |    Interval   |                    Pipeline                    |
-        |                                      Instance                                      |                                  Module                                 |   min   |   max   |    min   |    max   |  min  |  max  |                      Type                      |
-        +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
-        |grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114                   |stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2                   |      259|      259|  2.590 us|  2.590 us|    257|    257|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120                   |stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5                   |      259|      259|  2.590 us|  2.590 us|    257|    257|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136                 |stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12                 |      260|      260|  2.600 us|  2.600 us|    257|    257|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149                   |stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7                   |      259|      259|  2.590 us|  2.590 us|    257|    257|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165  |stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10  |    21512|    21512|  0.215 ms|  0.215 ms|  21511|  21511|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        +-----------------------------------------------------------------+------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |                                                                 |                                                      |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+        |                             Instance                            |                        Module                        |   min   |   max   |    min   |    max   | min | max |        Type       |
+        +-----------------------------------------------------------------+------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136              |stream_matmul_Pipeline_init_c_i_init_c_j              |      259|      259|  2.590 us|  2.590 us|    0|    0|  loop pipeline stp|
+        |grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142              |stream_matmul_Pipeline_read_a_i_read_a_j              |      259|      259|  2.590 us|  2.590 us|    0|    0|  loop pipeline stp|
+        |grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158            |stream_matmul_Pipeline_write_c_i_write_c_j            |      260|      260|  2.600 us|  2.600 us|    0|    0|  loop pipeline stp|
+        |grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171              |stream_matmul_Pipeline_read_b_i_read_b_j              |      259|      259|  2.590 us|  2.590 us|    0|    0|  loop pipeline stp|
+        |grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187  |stream_matmul_Pipeline_compute_i_compute_j_compute_k  |    21512|    21512|  0.215 ms|  0.215 ms|    0|    0|  loop pipeline stp|
+        +-----------------------------------------------------------------+------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
 
         * Loop: 
-        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
-        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_63_3  |    88144|    88144|     22036|          -|          -|     4|        no|
-        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        +---------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- k_tile_loop  |    22036|  1410304|     22036|          -|          -|  1 ~ 64|        no|
+        +---------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 
 
@@ -63,34 +63,34 @@
 |       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
 +-----------------+---------+----+-------+-------+-----+
 |DSP              |        -|   -|      -|      -|    -|
-|Expression       |        -|   -|      0|     26|    -|
+|Expression       |        -|   -|      0|    285|    -|
 |FIFO             |        -|   -|      -|      -|    -|
-|Instance         |        0|   5|   1091|   1870|    -|
+|Instance         |        0|   5|   1129|   1934|    -|
 |Memory           |        9|   -|      0|      0|    0|
 |Multiplexer      |        -|   -|      0|    482|    -|
-|Register         |        -|   -|     59|      -|    -|
+|Register         |        -|   -|    152|      -|    -|
 +-----------------+---------+----+-------+-------+-----+
-|Total            |        9|   5|   1150|   2378|    0|
+|Total            |        9|   5|   1281|   2701|    0|
 +-----------------+---------+----+-------+-------+-----+
 |Available        |      120|  80|  35200|  17600|    0|
 +-----------------+---------+----+-------+-------+-----+
-|Utilization (%)  |        7|   6|      3|     13|    0|
+|Utilization (%)  |        7|   6|      3|     15|    0|
 +-----------------+---------+----+-------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+----+-----+------+-----+
-    |                                      Instance                                      |                                  Module                                 | BRAM_18K| DSP|  FF |  LUT | URAM|
-    +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+----+-----+------+-----+
-    |control_s_axi_U                                                                     |control_s_axi                                                            |        0|   0|   36|    40|    0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114                   |stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2                   |        0|   0|   32|   148|    0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120                   |stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5                   |        0|   0|   29|   144|    0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149                   |stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7                   |        0|   0|   32|   158|    0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165  |stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10  |        0|   5|  926|  1193|    0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136                 |stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12                 |        0|   0|   36|   187|    0|
-    +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+----+-----+------+-----+
-    |Total                                                                               |                                                                         |        0|   5| 1091|  1870|    0|
-    +------------------------------------------------------------------------------------+-------------------------------------------------------------------------+---------+----+-----+------+-----+
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+-----+------+-----+
+    |                             Instance                            |                        Module                        | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+-----+------+-----+
+    |control_s_axi_U                                                  |control_s_axi                                         |        0|   0|   74|   104|    0|
+    |grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187  |stream_matmul_Pipeline_compute_i_compute_j_compute_k  |        0|   5|  926|  1193|    0|
+    |grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136              |stream_matmul_Pipeline_init_c_i_init_c_j              |        0|   0|   32|   148|    0|
+    |grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142              |stream_matmul_Pipeline_read_a_i_read_a_j              |        0|   0|   29|   144|    0|
+    |grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171              |stream_matmul_Pipeline_read_b_i_read_b_j              |        0|   0|   32|   158|    0|
+    |grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158            |stream_matmul_Pipeline_write_c_i_write_c_j            |        0|   0|   36|   187|    0|
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                            |                                                      |        0|   5| 1129|  1934|    0|
+    +-----------------------------------------------------------------+------------------------------------------------------+---------+----+-----+------+-----+
 
     * DSP: 
     N/A
@@ -116,15 +116,21 @@
     N/A
 
     * Expression: 
-    +---------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |                                     Variable Name                                     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |kk_2_fu_192_p2                                                                         |         +|   0|  0|  11|           3|           1|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_out_stream_TREADY  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln63_fu_186_p2                                                                    |      icmp|   0|  0|  13|           3|           4|
-    +---------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                                                                  |          |   0|  0|  26|           7|           6|
-    +---------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                              Variable Name                              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln99_fu_261_p2                                                       |         +|   0|  0|  39|          32|           1|
+    |grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_out_stream_TREADY  |       and|   0|  0|   2|           1|           1|
+    |empty_fu_235_p2                                                          |      icmp|   0|  0|  39|          32|           8|
+    |icmp_fu_210_p2                                                           |      icmp|   0|  0|  38|          31|           1|
+    |icmp_ln99_fu_256_p2                                                      |      icmp|   0|  0|  39|          32|          32|
+    |select_ln99_1_fu_245_p3                                                  |    select|   0|  0|  32|           1|          32|
+    |select_ln99_fu_222_p3                                                    |    select|   0|  0|  32|           1|          32|
+    |xor_ln99_1_fu_240_p2                                                     |       xor|   0|  0|  32|          32|           2|
+    |xor_ln99_fu_216_p2                                                       |       xor|   0|  0|  32|          32|           2|
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                    |          |   0|  0| 285|         194|         111|
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +-------------------------------+----+-----------+-----+-----------+
@@ -160,33 +166,35 @@
     |C_we0                          |  14|          3|    1|          3|
     |ap_NS_fsm                      |  59|         11|    1|         11|
     |in_stream_TREADY_int_regslice  |  14|          3|    1|          3|
-    |kk_fu_74                       |   9|          2|    3|          6|
+    |kk_fu_90                       |   9|          2|   32|         64|
     |out_stream_TDATA_int_regslice  |   9|          2|   32|         64|
     |out_stream_TKEEP_int_regslice  |   9|          2|    4|          8|
     |out_stream_TLAST_int_regslice  |   9|          2|    1|          2|
     |out_stream_TSTRB_int_regslice  |   9|          2|    4|          8|
     +-------------------------------+----+-----------+-----+-----------+
-    |Total                          | 482|        102|  152|        421|
+    |Total                          | 482|        102|  181|        479|
     +-------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-------------------------------------------------------------------------------------------------+----+----+-----+-----------+
-    |                                               Name                                              | FF | LUT| Bits| Const Bits|
-    +-------------------------------------------------------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                                                                        |  10|   0|   10|          0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_ap_start_reg                   |   1|   0|    1|          0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_ap_start_reg                   |   1|   0|    1|          0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_ap_start_reg                   |   1|   0|    1|          0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_ap_start_reg  |   1|   0|    1|          0|
-    |grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_ap_start_reg                 |   1|   0|    1|          0|
-    |kk_fu_74                                                                                         |   3|   0|    3|          0|
-    |out_stream_TDATA_reg                                                                             |  32|   0|   32|          0|
-    |out_stream_TKEEP_reg                                                                             |   4|   0|    4|          0|
-    |out_stream_TLAST_reg                                                                             |   1|   0|    1|          0|
-    |out_stream_TSTRB_reg                                                                             |   4|   0|    4|          0|
-    +-------------------------------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                                            |  59|   0|   59|          0|
-    +-------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                     Name                                     | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                     |  10|   0|   10|          0|
+    |grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_ap_start_reg  |   1|   0|    1|          0|
+    |grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_ap_start_reg              |   1|   0|    1|          0|
+    |grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_ap_start_reg              |   1|   0|    1|          0|
+    |grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_ap_start_reg              |   1|   0|    1|          0|
+    |grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_ap_start_reg            |   1|   0|    1|          0|
+    |kk_fu_90                                                                      |  32|   0|   32|          0|
+    |out_stream_TDATA_reg                                                          |  32|   0|   32|          0|
+    |out_stream_TKEEP_reg                                                          |   4|   0|    4|          0|
+    |out_stream_TLAST_reg                                                          |   1|   0|    1|          0|
+    |out_stream_TSTRB_reg                                                          |   4|   0|    4|          0|
+    |select_ln99_1_reg_285                                                         |  32|   0|   32|          0|
+    |select_ln99_reg_279                                                           |  32|   0|   32|          0|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                         | 152|   0|  152|          0|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -197,23 +205,23 @@
 +-----------------------+-----+-----+------------+---------------------+--------------+
 |       RTL Ports       | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
 +-----------------------+-----+-----+------------+---------------------+--------------+
-|s_axi_control_AWVALID  |   in|    1|       s_axi|              control|   return void|
-|s_axi_control_AWREADY  |  out|    1|       s_axi|              control|   return void|
-|s_axi_control_AWADDR   |   in|    4|       s_axi|              control|   return void|
-|s_axi_control_WVALID   |   in|    1|       s_axi|              control|   return void|
-|s_axi_control_WREADY   |  out|    1|       s_axi|              control|   return void|
-|s_axi_control_WDATA    |   in|   32|       s_axi|              control|   return void|
-|s_axi_control_WSTRB    |   in|    4|       s_axi|              control|   return void|
-|s_axi_control_ARVALID  |   in|    1|       s_axi|              control|   return void|
-|s_axi_control_ARREADY  |  out|    1|       s_axi|              control|   return void|
-|s_axi_control_ARADDR   |   in|    4|       s_axi|              control|   return void|
-|s_axi_control_RVALID   |  out|    1|       s_axi|              control|   return void|
-|s_axi_control_RREADY   |   in|    1|       s_axi|              control|   return void|
-|s_axi_control_RDATA    |  out|   32|       s_axi|              control|   return void|
-|s_axi_control_RRESP    |  out|    2|       s_axi|              control|   return void|
-|s_axi_control_BVALID   |  out|    1|       s_axi|              control|   return void|
-|s_axi_control_BREADY   |   in|    1|       s_axi|              control|   return void|
-|s_axi_control_BRESP    |  out|    2|       s_axi|              control|   return void|
+|s_axi_control_AWVALID  |   in|    1|       s_axi|              control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|              control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|       s_axi|              control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|              control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|              control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|              control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|              control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|              control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|              control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|       s_axi|              control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|              control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|              control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|              control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|              control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|              control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|              control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|              control|        scalar|
 |ap_clk                 |   in|    1|  ap_ctrl_hs|        stream_matmul|  return value|
 |ap_rst_n               |   in|    1|  ap_ctrl_hs|        stream_matmul|  return value|
 |interrupt              |  out|    1|  ap_ctrl_hs|        stream_matmul|  return value|

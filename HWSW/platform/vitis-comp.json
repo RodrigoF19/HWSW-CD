@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/home/public/Desktop/paulo/HWSW/project_matmul/design_1_wrapper.xsa",
+    "xsa": "C:/Users/rodrigofonseca/Lab1/lab1/design_1_wrapper.xsa",
     "xsaPathInPlatform": "platform/hw/design_1_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
@@ -37,6 +37,10 @@
       {
         "key": "-dt_overlay",
         "value": "0"
+      },
+      {
+        "key": "custom_dtsi",
+        "value": ""
       }
     ],
     "componentType": "PLATFORM",
@@ -72,5 +76,6 @@
     ],
     "emptyToolchainConfiguration": []
   },
-  "useSysrootToolchain": false
+  "useSysrootToolchain": false,
+  "templateFlow": "VITIS"
 }

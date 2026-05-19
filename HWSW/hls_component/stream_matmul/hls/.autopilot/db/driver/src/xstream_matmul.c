@@ -1,6 +1,6 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-// Tool Version Limit: 2025.05
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+// Tool Version Limit: 2025.11
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
@@ -74,6 +74,23 @@ void XStream_matmul_DisableAutoRestart(XStream_matmul *InstancePtr) {
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     XStream_matmul_WriteReg(InstancePtr->Control_BaseAddress, XSTREAM_MATMUL_CONTROL_ADDR_AP_CTRL, 0);
+}
+
+void XStream_matmul_Set_num_k_tiles(XStream_matmul *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XStream_matmul_WriteReg(InstancePtr->Control_BaseAddress, XSTREAM_MATMUL_CONTROL_ADDR_NUM_K_TILES_DATA, Data);
+}
+
+u32 XStream_matmul_Get_num_k_tiles(XStream_matmul *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XStream_matmul_ReadReg(InstancePtr->Control_BaseAddress, XSTREAM_MATMUL_CONTROL_ADDR_NUM_K_TILES_DATA);
+    return Data;
 }
 
 void XStream_matmul_InterruptGlobalEnable(XStream_matmul *InstancePtr) {

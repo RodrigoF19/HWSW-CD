@@ -1,6 +1,6 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-// Tool Version Limit: 2025.05
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+// Tool Version Limit: 2025.11
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
@@ -99,6 +99,8 @@ u32 XStream_matmul_IsReady(XStream_matmul *InstancePtr);
 void XStream_matmul_EnableAutoRestart(XStream_matmul *InstancePtr);
 void XStream_matmul_DisableAutoRestart(XStream_matmul *InstancePtr);
 
+void XStream_matmul_Set_num_k_tiles(XStream_matmul *InstancePtr, u32 Data);
+u32 XStream_matmul_Get_num_k_tiles(XStream_matmul *InstancePtr);
 
 void XStream_matmul_InterruptGlobalEnable(XStream_matmul *InstancePtr);
 void XStream_matmul_InterruptGlobalDisable(XStream_matmul *InstancePtr);

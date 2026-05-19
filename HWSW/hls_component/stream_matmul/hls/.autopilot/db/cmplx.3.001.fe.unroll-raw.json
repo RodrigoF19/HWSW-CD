@@ -1,47 +1,47 @@
 {
   "0": {
-    "basicblocks": 30,
-    "calls": "1 1 2",
+    "basicblocks": 36,
+    "calls": "2 2 1",
     "control_depth": 2,
     "def_use_depth": 6,
-    "file": "stream_matmul.cpp",
-    "fileloc": 38,
-    "instructions": 243,
+    "file": "stream_matmul_N64.cpp",
+    "fileloc": 55,
+    "instructions": 271,
     "loads": {
-      "L": 22
+      "L": 28
     },
-    "memory_accesses": 34,
+    "memory_accesses": 36,
     "name": "stream_matmul",
     "stores": {
       "L": 8
     },
-    "total_instructions": 254
+    "total_instructions": 295
   },
   "1": {
     "basicblocks": 1,
     "calls": "",
     "control_depth": 0,
     "def_use_depth": 1,
-    "file": "stream_matmul.cpp",
-    "fileloc": 16,
-    "instructions": 2,
+    "file": "stream_matmul_N64.cpp",
+    "fileloc": 40,
+    "instructions": 8,
     "memory_accesses": 0,
-    "name": "axis_to_float",
-    "total_instructions": 2
+    "name": "float_to_axis",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 12
   },
   "2": {
     "basicblocks": 1,
     "calls": "",
     "control_depth": 0,
     "def_use_depth": 1,
-    "file": "stream_matmul.cpp",
-    "fileloc": 23,
-    "instructions": 7,
+    "file": "stream_matmul_N64.cpp",
+    "fileloc": 33,
+    "instructions": 2,
     "memory_accesses": 0,
-    "name": "float_to_axis",
-    "stores": {
-      "L": 4
-    },
-    "total_instructions": 7
+    "name": "axis_to_float",
+    "total_instructions": 2
   }
 }

@@ -4,9 +4,9 @@
     "calls": "",
     "control_depth": 2,
     "def_use_depth": 7,
-    "file": "stream_matmul.cpp",
-    "fileloc": 38,
-    "instructions": 252,
+    "file": "stream_matmul_N64.cpp",
+    "fileloc": 55,
+    "instructions": 259,
     "loads": {
       "L": 12
     },
@@ -15,6 +15,6 @@
     "stores": {
       "L": 14
     },
-    "total_instructions": 252
+    "total_instructions": 259
   }
 }

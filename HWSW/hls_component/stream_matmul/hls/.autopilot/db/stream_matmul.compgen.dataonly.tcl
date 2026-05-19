@@ -2,6 +2,14 @@
 
 set axilite_register_dict [dict create]
 set port_control {
+num_k_tiles { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 16
+	offset_end 23
+}
 ap_start { }
 ap_done { }
 ap_ready { }

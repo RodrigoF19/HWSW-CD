@@ -53,6 +53,8 @@ using namespace std;
 #define WRAPC_STREAM_EGRESS_STATUS_out_stream_V_strb_V "../tv/stream_size/stream_egress_status_out_stream_V_strb_V.dat"
 #define WRAPC_STREAM_SIZE_OUT_out_stream_V_last_V "../tv/stream_size/stream_size_out_out_stream_V_last_V.dat"
 #define WRAPC_STREAM_EGRESS_STATUS_out_stream_V_last_V "../tv/stream_size/stream_egress_status_out_stream_V_last_V.dat"
+#define AUTOTB_TVIN_num_k_tiles "../tv/cdatafile/c.stream_matmul.autotvin_num_k_tiles.dat"
+#define AUTOTB_TVOUT_num_k_tiles "../tv/cdatafile/c.stream_matmul.autotvout_num_k_tiles.dat"
 
 
 // tvout file define:
@@ -113,6 +115,15 @@ namespace hls::sim
   }
 }
 
+
+static std::vector<unsigned> autorestart_seq;
+extern "C" {
+  void __hls_sim_static_autorestart_seq_push(int value);
+}
+
+void __hls_sim_static_autorestart_seq_push(int value) {
+  autorestart_seq.push_back(value);
+}
 namespace hls::sim
 {
   size_t divide_ceil(size_t a, size_t b)
@@ -572,6 +583,17 @@ namespace hls::sim
          << "  BitWidth " << widthHBM << "\n"
          << "}\n";
     }
+    
+    void formatAutorestartSeq()
+    {
+      if (!autorestart_seq.empty()) {
+        ss << "set Autorestart_seq {\n";
+        for (const auto &val : autorestart_seq) {
+          ss << "  " << val << "\n";
+        }
+        ss << "}\n";
+      }
+    }
 
     void close()
     {
@@ -579,6 +601,7 @@ namespace hls::sim
       formatTransDepth();
       formatContainsVLA();
       formatTransNum();
+      formatAutorestartSeq();
       if (nameHBM != "") {
         formatHBM();
       }
@@ -1267,10 +1290,10 @@ namespace hls::sim
 
 
 extern "C"
-void stream_matmul_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*);
+void stream_matmul_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, hls::sim::Byte<4>);
 
 extern "C"
-void apatb_stream_matmul_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __xlx_apatb_param_in_stream_V_keep_V, void* __xlx_apatb_param_in_stream_V_strb_V, void* __xlx_apatb_param_in_stream_V_last_V, void* __xlx_apatb_param_out_stream_V_data_V, void* __xlx_apatb_param_out_stream_V_keep_V, void* __xlx_apatb_param_out_stream_V_strb_V, void* __xlx_apatb_param_out_stream_V_last_V)
+void apatb_stream_matmul_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __xlx_apatb_param_in_stream_V_keep_V, void* __xlx_apatb_param_in_stream_V_strb_V, void* __xlx_apatb_param_in_stream_V_last_V, void* __xlx_apatb_param_out_stream_V_data_V, void* __xlx_apatb_param_out_stream_V_keep_V, void* __xlx_apatb_param_out_stream_V_strb_V, void* __xlx_apatb_param_out_stream_V_last_V, hls::sim::Byte<4> __xlx_apatb_param_num_k_tiles)
 {
   static hls::sim::Stream<hls::sim::Byte<4>> port0 {
     .width = 32,
@@ -1384,6 +1407,17 @@ void apatb_stream_matmul_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __
   port7.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_out_stream_V_last_V;
   port7.hasWrite = true;
 
+  static hls::sim::Register port8 {
+    .name = "num_k_tiles",
+    .width = 32,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_num_k_tiles),
+#endif
+  };
+  port8.param = &__xlx_apatb_param_num_k_tiles;
+
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
@@ -1399,6 +1433,8 @@ void apatb_stream_matmul_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     tcl.containsVLA = 0;
     CodeState = DUMP_INPUTS;
+    dump(port8, port8.iwriter, tcl.AESL_transaction);
+    port8.doTCL(tcl);
     port0.markSize();
     port1.markSize();
     port2.markSize();
@@ -1412,7 +1448,7 @@ void apatb_stream_matmul_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __
     port6.markSize();
     port7.markSize();
     CodeState = CALL_C_DUT;
-    stream_matmul_hw_stub_wrapper(__xlx_apatb_param_in_stream_V_data_V, __xlx_apatb_param_in_stream_V_keep_V, __xlx_apatb_param_in_stream_V_strb_V, __xlx_apatb_param_in_stream_V_last_V, __xlx_apatb_param_out_stream_V_data_V, __xlx_apatb_param_out_stream_V_keep_V, __xlx_apatb_param_out_stream_V_strb_V, __xlx_apatb_param_out_stream_V_last_V);
+    stream_matmul_hw_stub_wrapper(__xlx_apatb_param_in_stream_V_data_V, __xlx_apatb_param_in_stream_V_keep_V, __xlx_apatb_param_in_stream_V_strb_V, __xlx_apatb_param_in_stream_V_last_V, __xlx_apatb_param_out_stream_V_data_V, __xlx_apatb_param_out_stream_V_keep_V, __xlx_apatb_param_out_stream_V_strb_V, __xlx_apatb_param_out_stream_V_last_V, __xlx_apatb_param_num_k_tiles);
     port4.buffer();
     port5.buffer();
     port6.buffer();

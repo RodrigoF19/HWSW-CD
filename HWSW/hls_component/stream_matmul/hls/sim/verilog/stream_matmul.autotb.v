@@ -1,6 +1,6 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-// Tool Version Limit: 2025.05
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+// Tool Version Limit: 2025.11
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
@@ -25,14 +25,17 @@
 `define AESL_DEPTH_out_stream_V_keep_V 1
 `define AESL_DEPTH_out_stream_V_strb_V 1
 `define AESL_DEPTH_out_stream_V_last_V 1
+`define AESL_DEPTH_num_k_tiles 1
 `define AUTOTB_TVIN_in_stream_V_data_V  "../tv/cdatafile/c.stream_matmul.autotvin_in_stream_V_data_V.dat"
 `define AUTOTB_TVIN_in_stream_V_keep_V  "../tv/cdatafile/c.stream_matmul.autotvin_in_stream_V_keep_V.dat"
 `define AUTOTB_TVIN_in_stream_V_strb_V  "../tv/cdatafile/c.stream_matmul.autotvin_in_stream_V_strb_V.dat"
 `define AUTOTB_TVIN_in_stream_V_last_V  "../tv/cdatafile/c.stream_matmul.autotvin_in_stream_V_last_V.dat"
+`define AUTOTB_TVIN_num_k_tiles  "../tv/cdatafile/c.stream_matmul.autotvin_num_k_tiles.dat"
 `define AUTOTB_TVIN_in_stream_V_data_V_out_wrapc  "../tv/rtldatafile/rtl.stream_matmul.autotvin_in_stream_V_data_V.dat"
 `define AUTOTB_TVIN_in_stream_V_keep_V_out_wrapc  "../tv/rtldatafile/rtl.stream_matmul.autotvin_in_stream_V_keep_V.dat"
 `define AUTOTB_TVIN_in_stream_V_strb_V_out_wrapc  "../tv/rtldatafile/rtl.stream_matmul.autotvin_in_stream_V_strb_V.dat"
 `define AUTOTB_TVIN_in_stream_V_last_V_out_wrapc  "../tv/rtldatafile/rtl.stream_matmul.autotvin_in_stream_V_last_V.dat"
+`define AUTOTB_TVIN_num_k_tiles_out_wrapc  "../tv/rtldatafile/rtl.stream_matmul.autotvin_num_k_tiles.dat"
 `define AUTOTB_TVOUT_out_stream_V_data_V  "../tv/cdatafile/c.stream_matmul.autotvout_out_stream_V_data_V.dat"
 `define AUTOTB_TVOUT_out_stream_V_keep_V  "../tv/cdatafile/c.stream_matmul.autotvout_out_stream_V_keep_V.dat"
 `define AUTOTB_TVOUT_out_stream_V_strb_V  "../tv/cdatafile/c.stream_matmul.autotvout_out_stream_V_strb_V.dat"
@@ -43,13 +46,14 @@
 `define AUTOTB_TVOUT_out_stream_V_last_V_out_wrapc  "../tv/rtldatafile/rtl.stream_matmul.autotvout_out_stream_V_last_V.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 1;
+parameter AUTOTB_TRANSACTION_NUM = 21;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 88667;
-parameter LENGTH_in_stream_V_data_V = 2048;
-parameter LENGTH_in_stream_V_keep_V = 2048;
-parameter LENGTH_in_stream_V_last_V = 2048;
-parameter LENGTH_in_stream_V_strb_V = 2048;
+parameter LATENCY_ESTIMATION = 1410827;
+parameter LENGTH_in_stream_V_data_V = 32768;
+parameter LENGTH_in_stream_V_keep_V = 32768;
+parameter LENGTH_in_stream_V_last_V = 32768;
+parameter LENGTH_in_stream_V_strb_V = 32768;
+parameter LENGTH_num_k_tiles = 1;
 parameter LENGTH_out_stream_V_data_V = 256;
 parameter LENGTH_out_stream_V_keep_V = 256;
 parameter LENGTH_out_stream_V_last_V = 256;
@@ -73,14 +77,14 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [3 : 0] control_AWADDR;
+wire [4 : 0] control_AWADDR;
 wire  control_AWVALID;
 wire  control_AWREADY;
 wire  control_WVALID;
 wire  control_WREADY;
 wire [31 : 0] control_WDATA;
 wire [3 : 0] control_WSTRB;
-wire [3 : 0] control_ARADDR;
+wire [4 : 0] control_ARADDR;
 wire  control_ARVALID;
 wire  control_ARREADY;
 wire  control_RVALID;
@@ -112,6 +116,7 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
+wire control_write_data_finish;
 wire AESL_slave_start;
 reg AESL_slave_start_lock = 0;
 wire AESL_slave_write_start_in;

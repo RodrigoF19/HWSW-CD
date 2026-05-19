@@ -1,197 +1,203 @@
-  **** HLS Build v2025.1 6135595
-INFO: [HLS 200-2005] Using work_dir D:/HWSW/hls_component/stream_matmul 
-INFO: [HLS 200-2176] Writing Vitis IDE component file D:/HWSW/hls_component/stream_matmul/vitis-comp.json
-INFO: [HLS 200-10] Creating and opening component 'D:/HWSW/hls_component/stream_matmul'.
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul'.
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-2174] Applying component config ini file D:/HWSW/hls_component/hls_config.cfg
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../stream_matmul.cpp' from D:/HWSW/hls_component/hls_config.cfg(9)
-INFO: [HLS 200-10] Adding design file 'D:/HWSW/stream_matmul.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'tb.file=../tb_stream_matmul.cpp' from D:/HWSW/hls_component/hls_config.cfg(8)
-INFO: [HLS 200-10] Adding test bench file 'D:/HWSW/tb_stream_matmul.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.top=stream_matmul' from D:/HWSW/hls_component/hls_config.cfg(7)
-INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from D:/HWSW/hls_component/hls_config.cfg(4)
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../stream_matmul_N64.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/rodrigofonseca/Lab1/stream_matmul_N64.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../tb_stream_matmul_N64.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/rodrigofonseca/Lab1/tb_stream_matmul_N64.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=stream_matmul' from hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-1465] Applying config ini 'part=xc7z010clg400-1' from D:/HWSW/hls_component/hls_config.cfg(1)
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z010clg400-1' from hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
-INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from D:/HWSW/hls_component/hls_config.cfg(5)
-INFO: [HLS 200-2176] Writing Vitis IDE component file D:/HWSW/hls_component/stream_matmul/vitis-comp.json
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.53 seconds; current allocated memory: 147.418 MB.
-INFO: [HLS 200-10] Analyzing design file '../stream_matmul.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 2 seconds. Elapsed time: 7.265 seconds; current allocated memory: 150.105 MB.
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(10)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 6.439 seconds; current allocated memory: 139.523 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file '../stream_matmul_N64.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 15.536 seconds; current allocated memory: 142.703 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 470 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 254 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 227 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 162 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 226 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 226 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 226 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 311 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 310 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 269 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 269 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 250 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 252 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (D:/HWSW/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_87_10' (../stream_matmul.cpp:87:35) in function 'stream_matmul' partially with a factor of 4 (../stream_matmul.cpp:40:0)
-INFO: [HLS 214-178] Inlining function 'axis_to_float(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)' into 'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)' (../stream_matmul.cpp:40:0)
-INFO: [HLS 214-178] Inlining function 'float_to_axis(float, bool)' into 'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)' (../stream_matmul.cpp:40:0)
-INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 4 on dimension 2. (../stream_matmul.cpp:45:8)
-INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 4 on dimension 1. (../stream_matmul.cpp:46:11)
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_87_10> at ../stream_matmul.cpp:87:35 
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.808 seconds; current allocated memory: 152.051 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 152.051 MB.
+INFO: [HLS 200-1995] There were 740 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 295 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 255 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 230 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 317 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 245 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 245 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 245 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 319 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 317 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 273 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 273 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 259 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 259 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-188] Unrolling loop 'compute_k' (../stream_matmul_N64.cpp:138:17) in function 'stream_matmul' partially with a factor of 4 (../stream_matmul_N64.cpp:58:0)
+INFO: [HLS 214-178] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()' into 'float_to_axis(float, bool)' (../stream_matmul_N64.cpp:41:0)
+INFO: [HLS 214-178] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()' into 'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, int)' (../stream_matmul_N64.cpp:58:0)
+INFO: [HLS 214-178] Inlining function 'axis_to_float(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>)' into 'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, int)' (../stream_matmul_N64.cpp:58:0)
+INFO: [HLS 214-178] Inlining function 'float_to_axis(float, bool)' into 'stream_matmul(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, int)' (../stream_matmul_N64.cpp:58:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 4 on dimension 2. (../stream_matmul_N64.cpp:64:11)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 4 on dimension 1. (../stream_matmul_N64.cpp:65:11)
+INFO: [HLS 214-376] Pipelining loop< compute_k> at ../stream_matmul_N64.cpp:138:17 due to pipeline_loops threshold
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 13.563 seconds; current allocated memory: 144.500 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 144.504 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.366 seconds; current allocated memory: 156.945 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 158.754 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 158.777 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 180.746 MB.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_55_1'(../stream_matmul.cpp:55:22) and 'VITIS_LOOP_56_2'(../stream_matmul.cpp:56:26) in function 'stream_matmul' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_66_4'(../stream_matmul.cpp:66:26) and 'VITIS_LOOP_67_5'(../stream_matmul.cpp:67:30) in function 'stream_matmul' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_74_6'(../stream_matmul.cpp:74:26) and 'VITIS_LOOP_75_7'(../stream_matmul.cpp:75:30) in function 'stream_matmul' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_84_9'(../stream_matmul.cpp:84:30) and 'VITIS_LOOP_87_10'(../stream_matmul.cpp:87:35) in function 'stream_matmul' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_83_8'(../stream_matmul.cpp:83:26) and 'VITIS_LOOP_84_9'(../stream_matmul.cpp:84:30) in function 'stream_matmul' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_98_11'(../stream_matmul.cpp:98:23) and 'VITIS_LOOP_99_12'(../stream_matmul.cpp:99:27) in function 'stream_matmul' into perfectly nested loops.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_55_1' (../stream_matmul.cpp:55:22) in function 'stream_matmul'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_66_4' (../stream_matmul.cpp:66:26) in function 'stream_matmul'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_74_6' (../stream_matmul.cpp:74:26) in function 'stream_matmul'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_84_9' (../stream_matmul.cpp:84:30) in function 'stream_matmul'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_83_8' (../stream_matmul.cpp:83:26) in function 'stream_matmul'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_98_11' (../stream_matmul.cpp:98:23) in function 'stream_matmul'.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 218.562 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 161.859 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 186.230 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'init_c_i'(../stream_matmul_N64.cpp:87:5) and 'init_c_j'(../stream_matmul_N64.cpp:89:9) in function 'stream_matmul' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'read_a_i'(../stream_matmul_N64.cpp:106:9) and 'read_a_j'(../stream_matmul_N64.cpp:108:13) in function 'stream_matmul' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'read_b_i'(../stream_matmul_N64.cpp:118:9) and 'read_b_j'(../stream_matmul_N64.cpp:120:13) in function 'stream_matmul' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'compute_j'(../stream_matmul_N64.cpp:134:13) and 'compute_k'(../stream_matmul_N64.cpp:138:17) in function 'stream_matmul' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'compute_i'(../stream_matmul_N64.cpp:132:9) and 'compute_j'(../stream_matmul_N64.cpp:134:13) in function 'stream_matmul' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'write_c_i'(../stream_matmul_N64.cpp:153:5) and 'write_c_j'(../stream_matmul_N64.cpp:155:9) in function 'stream_matmul' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'init_c_i' (../stream_matmul_N64.cpp:87:5) in function 'stream_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'read_a_i' (../stream_matmul_N64.cpp:106:9) in function 'stream_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'read_b_i' (../stream_matmul_N64.cpp:118:9) in function 'stream_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'compute_j' (../stream_matmul_N64.cpp:134:13) in function 'stream_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'compute_i' (../stream_matmul_N64.cpp:132:9) in function 'stream_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'write_c_i' (../stream_matmul_N64.cpp:153:5) in function 'stream_matmul'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.655 seconds; current allocated memory: 229.582 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'stream_matmul' ...
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2' 
+INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_init_c_i_init_c_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_55_1_VITIS_LOOP_56_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_55_1_VITIS_LOOP_56_2'
+INFO: [SCHED 204-61] Pipelining loop 'init_c_i_init_c_j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'init_c_i_init_c_j'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 222.297 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.666 seconds; current allocated memory: 238.754 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.795 seconds; current allocated memory: 223.363 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 242.211 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5' 
+INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_read_a_i_read_a_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_66_4_VITIS_LOOP_67_5'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_66_4_VITIS_LOOP_67_5'
+INFO: [SCHED 204-61] Pipelining loop 'read_a_i_read_a_j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'read_a_i_read_a_j'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 223.492 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 242.422 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 223.504 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 242.457 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7' 
+INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_read_b_i_read_b_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_74_6_VITIS_LOOP_75_7'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_74_6_VITIS_LOOP_75_7'
+INFO: [SCHED 204-61] Pipelining loop 'read_b_i_read_b_j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'read_b_i_read_b_j'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 223.625 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 242.465 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 223.703 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 242.469 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' 
+INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'.
-WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' (loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('acc_1_write_ln85', ../stream_matmul.cpp:85) of variable 'acc', ../stream_matmul.cpp:89 on local variable 'acc', ../stream_matmul.cpp:85 and 'fadd' operation 32 bit ('acc', ../stream_matmul.cpp:89).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' (loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('acc_1_write_ln85', ../stream_matmul.cpp:85) of variable 'acc', ../stream_matmul.cpp:89 on local variable 'acc', ../stream_matmul.cpp:85 and 'fadd' operation 32 bit ('acc', ../stream_matmul.cpp:89).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' (loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation 0 bit ('acc_1_write_ln85', ../stream_matmul.cpp:85) of variable 'acc', ../stream_matmul.cpp:89 on local variable 'acc', ../stream_matmul.cpp:85 and 'fadd' operation 32 bit ('acc', ../stream_matmul.cpp:89).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' (loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation 0 bit ('acc_1_write_ln85', ../stream_matmul.cpp:85) of variable 'acc', ../stream_matmul.cpp:89 on local variable 'acc', ../stream_matmul.cpp:85 and 'fadd' operation 32 bit ('acc', ../stream_matmul.cpp:89).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' (loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'store' operation 0 bit ('acc_1_write_ln85', ../stream_matmul.cpp:85) of variable 'acc', ../stream_matmul.cpp:89 on local variable 'acc', ../stream_matmul.cpp:85 and 'fadd' operation 32 bit ('acc', ../stream_matmul.cpp:89).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' (loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'): Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1) between 'store' operation 0 bit ('acc_1_write_ln85', ../stream_matmul.cpp:85) of variable 'acc', ../stream_matmul.cpp:89 on local variable 'acc', ../stream_matmul.cpp:85 and 'fadd' operation 32 bit ('acc', ../stream_matmul.cpp:89).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 21, Depth = 29, loop 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'
+INFO: [SCHED 204-61] Pipelining loop 'compute_i_compute_j_compute_k'.
+WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' (loop 'compute_i_compute_j_compute_k'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('acc_1_write_ln135', ../stream_matmul_N64.cpp:135) of variable 'acc', ../stream_matmul_N64.cpp:140 32 bit on local variable 'acc', ../stream_matmul_N64.cpp:135 and 'fadd' operation 32 bit ('acc', ../stream_matmul_N64.cpp:140).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' (loop 'compute_i_compute_j_compute_k'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('acc_1_write_ln135', ../stream_matmul_N64.cpp:135) of variable 'acc', ../stream_matmul_N64.cpp:140 32 bit on local variable 'acc', ../stream_matmul_N64.cpp:135 and 'fadd' operation 32 bit ('acc', ../stream_matmul_N64.cpp:140).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' (loop 'compute_i_compute_j_compute_k'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('acc_1_write_ln135', ../stream_matmul_N64.cpp:135) of variable 'acc', ../stream_matmul_N64.cpp:140 32 bit on local variable 'acc', ../stream_matmul_N64.cpp:135 and 'fadd' operation 32 bit ('acc', ../stream_matmul_N64.cpp:140).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' (loop 'compute_i_compute_j_compute_k'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('acc_1_write_ln135', ../stream_matmul_N64.cpp:135) of variable 'acc', ../stream_matmul_N64.cpp:140 32 bit on local variable 'acc', ../stream_matmul_N64.cpp:135 and 'fadd' operation 32 bit ('acc', ../stream_matmul_N64.cpp:140).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' (loop 'compute_i_compute_j_compute_k'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'store' operation ('acc_1_write_ln135', ../stream_matmul_N64.cpp:135) of variable 'acc', ../stream_matmul_N64.cpp:140 32 bit on local variable 'acc', ../stream_matmul_N64.cpp:135 and 'fadd' operation 32 bit ('acc', ../stream_matmul_N64.cpp:140).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' (loop 'compute_i_compute_j_compute_k'): Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1) between 'store' operation ('acc_1_write_ln135', ../stream_matmul_N64.cpp:135) of variable 'acc', ../stream_matmul_N64.cpp:140 32 bit on local variable 'acc', ../stream_matmul_N64.cpp:135 and 'fadd' operation 32 bit ('acc', ../stream_matmul_N64.cpp:140).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 21, Depth = 29, loop 'compute_i_compute_j_compute_k'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.885 seconds; current allocated memory: 224.617 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.105 seconds; current allocated memory: 244.051 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 224.910 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 244.266 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12' 
+INFO: [HLS 200-42] -- Implementing module 'stream_matmul_Pipeline_write_c_i_write_c_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_98_11_VITIS_LOOP_99_12'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_98_11_VITIS_LOOP_99_12'
+INFO: [SCHED 204-61] Pipelining loop 'write_c_i_write_c_j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'write_c_i_write_c_j'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 225.145 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 244.547 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 225.223 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 244.629 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'stream_matmul' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 225.469 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 245.082 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 225.672 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 245.410 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2' 
+INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_init_c_i_init_c_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2' pipeline 'VITIS_LOOP_55_1_VITIS_LOOP_56_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 227.262 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_init_c_i_init_c_j' pipeline 'init_c_i_init_c_j' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_init_c_i_init_c_j'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 249.324 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5' 
+INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_read_a_i_read_a_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5' pipeline 'VITIS_LOOP_66_4_VITIS_LOOP_67_5' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.106 seconds; current allocated memory: 229.098 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_read_a_i_read_a_j' pipeline 'read_a_i_read_a_j' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_read_a_i_read_a_j'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 253.398 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7' 
+INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_read_b_i_read_b_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7' pipeline 'VITIS_LOOP_74_6_VITIS_LOOP_75_7' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 230.711 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_read_b_i_read_b_j' pipeline 'read_b_i_read_b_j' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_read_b_i_read_b_j'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.432 seconds; current allocated memory: 254.980 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' 
+INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' pipeline 'VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_compute_i_compute_j_compute_k' pipeline 'compute_i_compute_j_compute_k' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.763 seconds; current allocated memory: 232.898 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_compute_i_compute_j_compute_k'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 258.785 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12' 
+INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul_Pipeline_write_c_i_write_c_j' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12' pipeline 'VITIS_LOOP_98_11_VITIS_LOOP_99_12' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 235.277 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream_matmul_Pipeline_write_c_i_write_c_j' pipeline 'write_c_i_write_c_j' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul_Pipeline_write_c_i_write_c_j'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 261.199 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'stream_matmul' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -204,17 +210,19 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'stream_matmul/out_stream_V
 INFO: [RTGEN 206-500] Setting interface mode on port 'stream_matmul/out_stream_V_keep_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'stream_matmul/out_stream_V_strb_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'stream_matmul/out_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream_matmul/num_k_tiles' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'stream_matmul' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'num_k_tiles' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'stream_matmul'.
 INFO: [RTMG 210-278] Implementing memory 'stream_matmul_A_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'stream_matmul_C_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 236.977 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.756 seconds; current allocated memory: 241.590 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.872 seconds; current allocated memory: 246.984 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.208 seconds; current allocated memory: 263.840 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.799 seconds; current allocated memory: 270.367 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/rodrigofonseca/Lab1/hls_component/stream_matmul/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.24 seconds; current allocated memory: 276.230 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for stream_matmul.
 INFO: [VLOG 209-307] Generating Verilog RTL for stream_matmul.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 4 seconds. Total elapsed time: 29.816 seconds; peak allocated memory: 247.027 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 0m 34s
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 3 seconds. Total elapsed time: 46.179 seconds; peak allocated memory: 276.348 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 51s

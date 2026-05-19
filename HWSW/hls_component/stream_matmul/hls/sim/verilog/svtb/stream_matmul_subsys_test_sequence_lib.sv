@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -38,8 +38,8 @@
 
             svr_pkg::svr_slave_sequence #(41) svr_port_out_stream_seq;            
 
-            axi_pkg::axi_busdatas_master_sequence#(4, 32) axi_master_wr_control_seq;
-            axi_pkg::axi_busdatas_master_sequence#(4, 32) axi_master_poll_control_seq;
+            axi_pkg::axi_busdatas_master_sequence#(5, 32) axi_master_wr_control_seq;
+            axi_pkg::axi_busdatas_master_sequence#(5, 32) axi_master_poll_control_seq;
 
             if (!uvm_config_db#(stream_matmul_reference_model)::get(p_sequencer,"", "refm", refm))
                 `uvm_fatal(this.get_full_name(), "No reference model")
@@ -106,15 +106,28 @@
                             axi_master_wr_control_seq.ap_ready   = refm.ap_ready_for_nexttrans  ;
                             axi_master_wr_control_seq.finish     = refm.finish ;
                             axi_master_wr_control_seq.isusr_delay = axi_pkg::NO_DELAY;
-                            for(int i=0; i<1; i++) begin
+                            for(int i=0; i<21; i++) begin
+                                logic[63:0] data64bit_num_k_tiles[$];
+                                logic[32-1:0] databusbit_num_k_tiles[$];
+                                data64bit_num_k_tiles.delete(); databusbit_num_k_tiles.delete();
+                                axi_master_wr_control_seq.StableAxiliteNoUpdate=0;
+                                refm.mem_blk_pages_control_num_k_tiles.tobusdata(data64bit_num_k_tiles, refm.mem_blk_pages_control_num_k_tiles.rd_page_idx, 32);
+                                foreach(data64bit_num_k_tiles[s]) databusbit_num_k_tiles[s]=data64bit_num_k_tiles[s][32-1:0];
+                                axi_master_wr_control_seq.StableAxiliteNoUpdate=1;
+                                axi_master_wr_control_seq.datamerge_inavg(databusbit_num_k_tiles, 0, 16, 1);
+                                `uvm_send(axi_master_wr_control_seq);
+                                refm.write_data_finish_control = 1;
+                                `uvm_info("control data writting thread", $sformatf("%0dth(total 21): waiting for all write data finish event",i), UVM_LOW)
+                                wait(refm.allaxilite_write_data_finish.triggered);
+                                refm.write_data_finish_control = 0;
                                 fork
-                                    begin
+                                    begin // configure start to enable DUT
                                         axi_master_wr_control_seq.wr_addr_data.push_back( (1<<0)+(0<<32) );
-                                        `uvm_info("control start dut by axilite", $sformatf("%0dth(total 1): begin to set start bit",i), UVM_LOW)
+                                        `uvm_info("control start dut by axilite", $sformatf("%0dth(total 21): begin to set start bit",i), UVM_LOW)
                                         `uvm_send(axi_master_wr_control_seq);
                                     end
                                     begin
-                                        `uvm_info("control wait for ap_ready for next trans", $sformatf("%0dth(total 1): begin to wait",i), UVM_LOW)
+                                        `uvm_info("control wait for ap_ready for next trans", $sformatf("%0dth(total 21): begin to wait",i), UVM_LOW)
                                         wait(refm.dut2tb_ap_ready.triggered);
                                         wait(refm.ap_done_for_nexttrans.triggered);
                                         #0.01; //make sure mem incr_rd_page_idx is called first
@@ -123,7 +136,7 @@
                             end
                         end
                         begin
-                            for(int j=0; j<1; j=j+refm.ap_done_cnt) begin
+                            for(int j=0; j<21; j=j+refm.ap_done_cnt) begin
                                 wait(misc_if.dut2tb_ap_done_kernel == 1);
                                 `uvm_info("test finish control", $sformatf("ap_done of kernel is triggered"), UVM_LOW)
                                 @(posedge misc_if.clock);
@@ -137,11 +150,12 @@
                                         repeat(2) @(posedge misc_if.clock);
                                     end
                                     begin
-                                        `uvm_info("test finish control", $sformatf("%0dth(total 1) ap_done_for_nexttrans begin to wait",j), UVM_LOW)
+                                        `uvm_info("test finish control", $sformatf("%0dth(total 21) ap_done_for_nexttrans begin to wait",j), UVM_LOW)
                                         @refm.dut2tb_ap_done;
                                     end
                                 join_any
                                 disable fork;
+                                wait(refm.ap_ready_for_nexttrans.triggered);
                             end
                         end
                         begin
@@ -156,7 +170,7 @@
                 end
 
                 begin
-                    for(int j=0; j<1; j=j+refm.ap_done_cnt) @refm.ap_done_for_nexttrans;
+                    for(int j=0; j<21; j=j+refm.ap_done_cnt) @refm.ap_done_for_nexttrans;
                     `uvm_info(this.get_full_name(), "autotb finished", UVM_LOW)
                     -> refm.finish;
                     refm.misc_if.finished = 1;

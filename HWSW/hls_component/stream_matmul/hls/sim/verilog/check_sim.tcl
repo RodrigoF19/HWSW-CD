@@ -1,6 +1,6 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-# Tool Version Limit: 2025.05
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+# Tool Version Limit: 2025.11
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
@@ -80,6 +80,7 @@ proc check_tvin_file {} {
          "c.stream_matmul.autotvin_in_stream_V_keep_V.dat"
          "c.stream_matmul.autotvin_in_stream_V_strb_V.dat"
          "c.stream_matmul.autotvin_in_stream_V_last_V.dat"
+         "c.stream_matmul.autotvin_num_k_tiles.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

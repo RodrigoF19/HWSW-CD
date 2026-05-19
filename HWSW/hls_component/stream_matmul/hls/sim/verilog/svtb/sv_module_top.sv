@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -57,7 +57,7 @@ module sv_module_top;
     end
 
 
-    axi_if #(4,4,4,3,1)  axi_control_if (.clk  (apatb_stream_matmul_top.AESL_clock), .rst(apatb_stream_matmul_top.AESL_reset));
+    axi_if #(5,4,4,3,1)  axi_control_if (.clk  (apatb_stream_matmul_top.AESL_clock), .rst(apatb_stream_matmul_top.AESL_reset));
     assign apatb_stream_matmul_top.control_AWADDR = axi_control_if.AWADDR;
     assign apatb_stream_matmul_top.control_AWVALID = axi_control_if.AWVALID;
     assign axi_control_if.AWREADY = apatb_stream_matmul_top.control_AWREADY;
@@ -79,7 +79,7 @@ module sv_module_top;
     assign axi_control_if.RID = 0;
     assign axi_control_if.RLAST = 1;
     initial begin
-        uvm_config_db #( virtual axi_if#(4,4,4,3,1) )::set(null, "uvm_test_top.top_env.axi_lite_control.*", "vif", axi_control_if);
+        uvm_config_db #( virtual axi_if#(5,4,4,3,1) )::set(null, "uvm_test_top.top_env.axi_lite_control.*", "vif", axi_control_if);
     end
 
 

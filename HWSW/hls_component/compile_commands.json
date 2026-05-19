@@ -1,27 +1,27 @@
 [
   {
-    "directory": "/home/public/Desktop/paulo/HWSW/hls_component",
+    "directory": "C:\\Users\\rodrigofonseca\\Lab1\\hls_component",
     "arguments": [
-      "/opt/Xilinx/2025.1/Vitis/vcxx/libexec/clang++",
-      "--gcc-toolchain=/opt/Xilinx/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
       "-fhls",
-      "-hls-syn-headers-dir=/opt/Xilinx/2025.1/Vitis/common/technology/autopilot",
+      "-hls-syn-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\common\\technology\\autopilot",
       "-fhlstoplevel=stream_matmul",
       "-c",
-      "/home/public/Desktop/paulo/HWSW/hls_component/../stream_matmul.cpp"
+      "C:\\Users\\rodrigofonseca\\Lab1\\stream_matmul_N64.cpp"
     ],
-    "file": "/home/public/Desktop/paulo/HWSW/hls_component/../stream_matmul.cpp"
+    "file": "C:\\Users\\rodrigofonseca\\Lab1\\stream_matmul_N64.cpp"
   },
   {
-    "directory": "/home/public/Desktop/paulo/HWSW/hls_component",
+    "directory": "C:\\Users\\rodrigofonseca\\Lab1\\hls_component",
     "arguments": [
-      "/opt/Xilinx/2025.1/Vitis/vcxx/libexec/clang++",
-      "--gcc-toolchain=/opt/Xilinx/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
       "-fhls-tb",
-      "-hls-sim-headers-dir=/opt/Xilinx/2025.1/Vitis/include",
+      "-hls-sim-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\include",
       "-c",
-      "/home/public/Desktop/paulo/HWSW/hls_component/../tb_stream_matmul.cpp"
+      "C:\\Users\\rodrigofonseca\\Lab1\\tb_stream_matmul_N64.cpp"
     ],
-    "file": "/home/public/Desktop/paulo/HWSW/hls_component/../tb_stream_matmul.cpp"
+    "file": "C:\\Users\\rodrigofonseca\\Lab1\\tb_stream_matmul_N64.cpp"
   }
 ]

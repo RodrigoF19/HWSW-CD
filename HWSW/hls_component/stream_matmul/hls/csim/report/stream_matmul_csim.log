@@ -1,51 +1,59 @@
 INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-   Compiling ../../../../../tb_stream_matmul.cpp in debug mode
-   Compiling ../../../../../stream_matmul.cpp in debug mode
+   Compiling ../../../../../tb_stream_matmul_N64.cpp in debug mode
+   Compiling ../../../../../stream_matmul_N64.cpp in debug mode
    Generating csim.exe
 
-Running test case: Identity A: C should equal B
-Testing output tile (0,0)
-Testing output tile (0,1)
-Testing output tile (1,0)
-Testing output tile (1,1)
-Testing output tile (2,3)
-Testing output tile (3,2)
-Testing output tile (3,3)
-Test case: Identity A: C should equal B
-Max error = 0.000000
-MSE       = 0.000000
-Result: PASSED
-
-Running test case: All ones: every C element should equal N
-Testing output tile (0,0)
-Testing output tile (0,1)
-Testing output tile (1,0)
-Testing output tile (1,1)
-Testing output tile (2,3)
-Testing output tile (3,2)
-Testing output tile (3,3)
-Test case: All ones: every C element should equal N
-Max error = 0.000000
-MSE       = 0.000000
-Result: PASSED
-
-Running test case: Random matrices in [0,1]
-Testing output tile (0,0)
-Testing output tile (0,1)
-Testing output tile (1,0)
-Testing output tile (1,1)
-Testing output tile (2,3)
-Testing output tile (3,2)
-Testing output tile (3,3)
-Test case: Random matrices in [0,1]
+====================================
+Running test case: Identity A
+N = 1024, TILE = 16, NUM_K_TILES = 64
+====================================
+Testing Identity A, output tile (0,0)
+Testing Identity A, output tile (0,1)
+Testing Identity A, output tile (1,0)
+Testing Identity A, output tile (1,1)
+Testing Identity A, output tile (10,20)
+Testing Identity A, output tile (32,17)
+Testing Identity A, output tile (63,63)
+Test case: Identity A
 Max error = 0.000000
 MSE       = 0.000000
 Result: PASSED
 
 ====================================
-ALL TESTS PASSED
+Running test case: All ones
+N = 1024, TILE = 16, NUM_K_TILES = 64
 ====================================
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2048
+Testing All ones, output tile (0,0)
+Testing All ones, output tile (0,1)
+Testing All ones, output tile (1,0)
+Testing All ones, output tile (1,1)
+Testing All ones, output tile (10,20)
+Testing All ones, output tile (32,17)
+Testing All ones, output tile (63,63)
+Test case: All ones
+Max error = 0.000000
+MSE       = 0.000000
+Result: PASSED
+
+====================================
+Running test case: Deterministic pseudo-random
+N = 1024, TILE = 16, NUM_K_TILES = 64
+====================================
+Testing Deterministic pseudo-random, output tile (0,0)
+Testing Deterministic pseudo-random, output tile (0,1)
+Testing Deterministic pseudo-random, output tile (1,0)
+Testing Deterministic pseudo-random, output tile (1,1)
+Testing Deterministic pseudo-random, output tile (10,20)
+Testing Deterministic pseudo-random, output tile (32,17)
+Testing Deterministic pseudo-random, output tile (63,63)
+Test case: Deterministic pseudo-random
+Max error = 0.000000
+MSE       = 0.000000
+Result: PASSED
+
+====================================
+ALL N=1024 FLOATING-POINT TESTS PASSED
+====================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 32768
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,32 +1,34 @@
 
 log_wave -r /
 set designtopgroup [add_wave_group "Design Top Signals"]
+set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+set num_k_tiles__return_group [add_wave_group num_k_tiles__return(axi_slave) -into $cinoutgroup]
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/interrupt -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_BRESP -into $num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_BREADY -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_BVALID -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RRESP -into $num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RDATA -into $num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RREADY -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RVALID -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARREADY -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARVALID -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARADDR -into $num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WSTRB -into $num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WDATA -into $num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WREADY -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WVALID -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWREADY -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWVALID -into $num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWADDR -into $num_k_tiles__return_group -radix hex
 set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
-set return_group [add_wave_group return(axi_slave) -into $coutputgroup]
+set return_group [add_wave_group return(axis) -into $coutputgroup]
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TLAST -into $return_group -color #ffff00 -radix hex
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TSTRB -into $return_group -radix hex
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TKEEP -into $return_group -radix hex
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TREADY -into $return_group -color #ffff00 -radix hex
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TVALID -into $return_group -color #ffff00 -radix hex
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TDATA -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/interrupt -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_BRESP -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_BREADY -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_BVALID -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RRESP -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RDATA -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RREADY -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_RVALID -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARREADY -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARVALID -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARADDR -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WSTRB -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WDATA -into $return_group -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WREADY -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WVALID -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWREADY -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWVALID -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWADDR -into $return_group -radix hex
 set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
 set return_group [add_wave_group return(axis) -into $cinputgroup]
 add_wave /apatb_stream_matmul_top/AESL_inst_stream_matmul/in_stream_TLAST -into $return_group -color #ffff00 -radix hex
@@ -55,36 +57,39 @@ add_wave /apatb_stream_matmul_top/LENGTH_in_stream_V_data_V -into $tb_portdepth_
 add_wave /apatb_stream_matmul_top/LENGTH_in_stream_V_keep_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_stream_matmul_top/LENGTH_in_stream_V_last_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_stream_matmul_top/LENGTH_in_stream_V_strb_V -into $tb_portdepth_group -radix hex
+add_wave /apatb_stream_matmul_top/LENGTH_num_k_tiles -into $tb_portdepth_group -radix hex
 add_wave /apatb_stream_matmul_top/LENGTH_out_stream_V_data_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_stream_matmul_top/LENGTH_out_stream_V_keep_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_stream_matmul_top/LENGTH_out_stream_V_last_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_stream_matmul_top/LENGTH_out_stream_V_strb_V -into $tb_portdepth_group -radix hex
+set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+set tb_num_k_tiles__return_group [add_wave_group num_k_tiles__return(axi_slave) -into $tbcinoutgroup]
+add_wave /apatb_stream_matmul_top/control_INTERRUPT -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_BRESP -into $tb_num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/control_BREADY -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_BVALID -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_RRESP -into $tb_num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/control_RDATA -into $tb_num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/control_RREADY -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_RVALID -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_ARREADY -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_ARVALID -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_ARADDR -into $tb_num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/control_WSTRB -into $tb_num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/control_WDATA -into $tb_num_k_tiles__return_group -radix hex
+add_wave /apatb_stream_matmul_top/control_WREADY -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_WVALID -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_AWREADY -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_AWVALID -into $tb_num_k_tiles__return_group -color #ffff00 -radix hex
+add_wave /apatb_stream_matmul_top/control_AWADDR -into $tb_num_k_tiles__return_group -radix hex
 set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
-set tb_return_group [add_wave_group return(axi_slave) -into $tbcoutputgroup]
+set tb_return_group [add_wave_group return(axis) -into $tbcoutputgroup]
 add_wave /apatb_stream_matmul_top/out_stream_TLAST -into $tb_return_group -color #ffff00 -radix hex
 add_wave /apatb_stream_matmul_top/out_stream_TSTRB -into $tb_return_group -radix hex
 add_wave /apatb_stream_matmul_top/out_stream_TKEEP -into $tb_return_group -radix hex
 add_wave /apatb_stream_matmul_top/out_stream_TREADY -into $tb_return_group -color #ffff00 -radix hex
 add_wave /apatb_stream_matmul_top/out_stream_TVALID -into $tb_return_group -color #ffff00 -radix hex
 add_wave /apatb_stream_matmul_top/out_stream_TDATA -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_INTERRUPT -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_BRESP -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_BREADY -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_BVALID -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_RRESP -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_RDATA -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_RREADY -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_RVALID -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_ARREADY -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_ARVALID -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_ARADDR -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_WSTRB -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_WDATA -into $tb_return_group -radix hex
-add_wave /apatb_stream_matmul_top/control_WREADY -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_WVALID -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_AWREADY -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_AWVALID -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_stream_matmul_top/control_AWADDR -into $tb_return_group -radix hex
 set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
 set tb_return_group [add_wave_group return(axis) -into $tbcinputgroup]
 add_wave /apatb_stream_matmul_top/in_stream_TLAST -into $tb_return_group -color #ffff00 -radix hex
@@ -95,4 +100,5 @@ add_wave /apatb_stream_matmul_top/in_stream_TVALID -into $tb_return_group -color
 add_wave /apatb_stream_matmul_top/in_stream_TDATA -into $tb_return_group -radix hex
 save_wave_config stream_matmul.wcfg
 run all
+quit
 

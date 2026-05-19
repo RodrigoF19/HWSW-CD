@@ -9,16 +9,16 @@ wire [3:0] inst_idle_sigs;
 wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120.in_stream_TDATA_blk_n;
-assign axis_block_sigs[1] = ~AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136.out_stream_TDATA_blk_n;
-assign axis_block_sigs[2] = ~AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149.in_stream_TDATA_blk_n;
+assign axis_block_sigs[0] = ~AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142.in_stream_TDATA_blk_n;
+assign axis_block_sigs[1] = ~AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158.out_stream_TDATA_blk_n;
+assign axis_block_sigs[2] = ~AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171.in_stream_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
-assign inst_idle_sigs[1] = AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120.ap_idle;
-assign inst_idle_sigs[2] = AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136.ap_idle;
-assign inst_idle_sigs[3] = AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149.ap_idle;
+assign inst_idle_sigs[1] = AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142.ap_idle;
+assign inst_idle_sigs[2] = AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158.ap_idle;
+assign inst_idle_sigs[3] = AESL_inst_stream_matmul.grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171.ap_idle;
 
 AESL_deadlock_idx0_monitor AESL_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

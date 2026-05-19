@@ -5,34 +5,34 @@
 <ModuleName>stream_matmul</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114</InstName>
-<ModuleName>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</ModuleName>
-<IsCompInst>true</IsCompInst>
-<ID>114</ID>
-</Instance>
-<Instance>
-<InstName>grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120</InstName>
-<ModuleName>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</ModuleName>
-<IsCompInst>true</IsCompInst>
-<ID>120</ID>
-</Instance>
-<Instance>
-<InstName>grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136</InstName>
-<ModuleName>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</ModuleName>
+<InstName>grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136</InstName>
+<ModuleName>stream_matmul_Pipeline_init_c_i_init_c_j</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>136</ID>
 </Instance>
 <Instance>
-<InstName>grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149</InstName>
-<ModuleName>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</ModuleName>
+<InstName>grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142</InstName>
+<ModuleName>stream_matmul_Pipeline_read_a_i_read_a_j</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>149</ID>
+<ID>142</ID>
 </Instance>
 <Instance>
-<InstName>grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165</InstName>
-<ModuleName>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</ModuleName>
+<InstName>grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158</InstName>
+<ModuleName>stream_matmul_Pipeline_write_c_i_write_c_j</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>165</ID>
+<ID>158</ID>
+</Instance>
+<Instance>
+<InstName>grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171</InstName>
+<ModuleName>stream_matmul_Pipeline_read_b_i_read_b_j</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>171</ID>
+</Instance>
+<Instance>
+<InstName>grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187</InstName>
+<ModuleName>stream_matmul_Pipeline_compute_i_compute_j_compute_k</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -40,9 +40,9 @@
 
 <ModuleInformation>
 <Module>
-<Name>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Name>
+<Name>stream_matmul_Pipeline_init_c_i_init_c_j</Name>
 <Loops>
-<VITIS_LOOP_55_1_VITIS_LOOP_56_2></VITIS_LOOP_55_1_VITIS_LOOP_56_2>
+<init_c_i_init_c_j></init_c_i_init_c_j>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -58,12 +58,12 @@
 <Average-caseRealTimeLatency>2.590 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>2.590 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>257</PipelineInitiationInterval>
-<PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+<PipelineType>loop pipeline stpstp (delay=0 clock cycles(s))</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_55_1_VITIS_LOOP_56_2>
-<Name>VITIS_LOOP_55_1_VITIS_LOOP_56_2</Name>
+<init_c_i_init_c_j>
+<Name>init_c_i_init_c_j</Name>
 <Slack>7.30</Slack>
 <TripCount>256</TripCount>
 <isPerfectNested>0</isPerfectNested>
@@ -75,19 +75,19 @@
 <PerformancePragma>-</PerformancePragma>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_55_1_VITIS_LOOP_56_2>
+</init_c_i_init_c_j>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:52</SourceLocation>
+<SourceLocation>../stream_matmul_N64.cpp:71</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_55_1_VITIS_LOOP_56_2>
-<Name>VITIS_LOOP_55_1_VITIS_LOOP_56_2</Name>
+<init_c_i_init_c_j>
+<Name>init_c_i_init_c_j</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:55</SourceLocation>
-</VITIS_LOOP_55_1_VITIS_LOOP_56_2>
+<SourceLocation>../stream_matmul_N64.cpp:87</SourceLocation>
+</init_c_i_init_c_j>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -113,7 +113,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Object>
+<Object>stream_matmul_Pipeline_init_c_i_init_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -124,7 +124,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Object>
+<Object>stream_matmul_Pipeline_init_c_i_init_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -135,7 +135,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Object>
+<Object>stream_matmul_Pipeline_init_c_i_init_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -146,7 +146,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Object>
+<Object>stream_matmul_Pipeline_init_c_i_init_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -157,7 +157,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Object>
+<Object>stream_matmul_Pipeline_init_c_i_init_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -168,7 +168,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2</Object>
+<Object>stream_matmul_Pipeline_init_c_i_init_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -224,9 +224,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Name>
+<Name>stream_matmul_Pipeline_read_a_i_read_a_j</Name>
 <Loops>
-<VITIS_LOOP_66_4_VITIS_LOOP_67_5></VITIS_LOOP_66_4_VITIS_LOOP_67_5>
+<read_a_i_read_a_j></read_a_i_read_a_j>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -242,12 +242,12 @@
 <Average-caseRealTimeLatency>2.590 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>2.590 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>257</PipelineInitiationInterval>
-<PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+<PipelineType>loop pipeline stpstp (delay=0 clock cycles(s))</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_66_4_VITIS_LOOP_67_5>
-<Name>VITIS_LOOP_66_4_VITIS_LOOP_67_5</Name>
+<read_a_i_read_a_j>
+<Name>read_a_i_read_a_j</Name>
 <Slack>7.30</Slack>
 <TripCount>256</TripCount>
 <isPerfectNested>0</isPerfectNested>
@@ -259,19 +259,19 @@
 <PerformancePragma>-</PerformancePragma>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_66_4_VITIS_LOOP_67_5>
+</read_a_i_read_a_j>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:52</SourceLocation>
+<SourceLocation>../stream_matmul_N64.cpp:71</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_66_4_VITIS_LOOP_67_5>
-<Name>VITIS_LOOP_66_4_VITIS_LOOP_67_5</Name>
+<read_a_i_read_a_j>
+<Name>read_a_i_read_a_j</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:66</SourceLocation>
-</VITIS_LOOP_66_4_VITIS_LOOP_67_5>
+<SourceLocation>../stream_matmul_N64.cpp:106</SourceLocation>
+</read_a_i_read_a_j>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -297,7 +297,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Object>
+<Object>stream_matmul_Pipeline_read_a_i_read_a_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -308,7 +308,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Object>
+<Object>stream_matmul_Pipeline_read_a_i_read_a_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -319,7 +319,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Object>
+<Object>stream_matmul_Pipeline_read_a_i_read_a_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -330,7 +330,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Object>
+<Object>stream_matmul_Pipeline_read_a_i_read_a_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -341,7 +341,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Object>
+<Object>stream_matmul_Pipeline_read_a_i_read_a_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -352,7 +352,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5</Object>
+<Object>stream_matmul_Pipeline_read_a_i_read_a_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -606,9 +606,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Name>
+<Name>stream_matmul_Pipeline_read_b_i_read_b_j</Name>
 <Loops>
-<VITIS_LOOP_74_6_VITIS_LOOP_75_7></VITIS_LOOP_74_6_VITIS_LOOP_75_7>
+<read_b_i_read_b_j></read_b_i_read_b_j>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -624,12 +624,12 @@
 <Average-caseRealTimeLatency>2.590 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>2.590 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>257</PipelineInitiationInterval>
-<PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+<PipelineType>loop pipeline stpstp (delay=0 clock cycles(s))</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_74_6_VITIS_LOOP_75_7>
-<Name>VITIS_LOOP_74_6_VITIS_LOOP_75_7</Name>
+<read_b_i_read_b_j>
+<Name>read_b_i_read_b_j</Name>
 <Slack>7.30</Slack>
 <TripCount>256</TripCount>
 <isPerfectNested>0</isPerfectNested>
@@ -641,19 +641,19 @@
 <PerformancePragma>-</PerformancePragma>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_74_6_VITIS_LOOP_75_7>
+</read_b_i_read_b_j>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:52</SourceLocation>
+<SourceLocation>../stream_matmul_N64.cpp:71</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_74_6_VITIS_LOOP_75_7>
-<Name>VITIS_LOOP_74_6_VITIS_LOOP_75_7</Name>
+<read_b_i_read_b_j>
+<Name>read_b_i_read_b_j</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:74</SourceLocation>
-</VITIS_LOOP_74_6_VITIS_LOOP_75_7>
+<SourceLocation>../stream_matmul_N64.cpp:118</SourceLocation>
+</read_b_i_read_b_j>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -679,7 +679,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Object>
+<Object>stream_matmul_Pipeline_read_b_i_read_b_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -690,7 +690,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Object>
+<Object>stream_matmul_Pipeline_read_b_i_read_b_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -701,7 +701,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Object>
+<Object>stream_matmul_Pipeline_read_b_i_read_b_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -712,7 +712,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Object>
+<Object>stream_matmul_Pipeline_read_b_i_read_b_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -723,7 +723,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Object>
+<Object>stream_matmul_Pipeline_read_b_i_read_b_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -734,7 +734,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7</Object>
+<Object>stream_matmul_Pipeline_read_b_i_read_b_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -988,9 +988,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Name>
+<Name>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Name>
 <Loops>
-<VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10></VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10>
+<compute_i_compute_j_compute_k></compute_i_compute_j_compute_k>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -1006,12 +1006,12 @@
 <Average-caseRealTimeLatency>0.215 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.215 ms</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>21511</PipelineInitiationInterval>
-<PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+<PipelineType>loop pipeline stpstp (delay=0 clock cycles(s))</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10>
-<Name>VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Name>
+<compute_i_compute_j_compute_k>
+<Name>compute_i_compute_j_compute_k</Name>
 <Slack>7.30</Slack>
 <TripCount>1024</TripCount>
 <isPerfectNested>0</isPerfectNested>
@@ -1023,20 +1023,20 @@
 <PerformancePragma>-</PerformancePragma>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10>
+</compute_i_compute_j_compute_k>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:52</SourceLocation>
+<SourceLocation>../stream_matmul_N64.cpp:71</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10>
-<Name>VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Name>
+<compute_i_compute_j_compute_k>
+<Name>compute_i_compute_j_compute_k</Name>
 <IssueType>II Violation</IssueType>
 <ViolationType>Memory Dependency</ViolationType>
 <IterationDistance>1</IterationDistance>
-<SourceLocation>../stream_matmul.cpp:84</SourceLocation>
-</VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10>
+<SourceLocation>../stream_matmul_N64.cpp:134</SourceLocation>
+</compute_i_compute_j_compute_k>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -1062,7 +1062,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Object>
+<Object>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1073,7 +1073,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Object>
+<Object>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1084,7 +1084,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Object>
+<Object>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1095,7 +1095,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Object>
+<Object>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1106,7 +1106,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Object>
+<Object>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1117,7 +1117,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10</Object>
+<Object>stream_matmul_Pipeline_compute_i_compute_j_compute_k</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1448,9 +1448,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Name>
+<Name>stream_matmul_Pipeline_write_c_i_write_c_j</Name>
 <Loops>
-<VITIS_LOOP_98_11_VITIS_LOOP_99_12></VITIS_LOOP_98_11_VITIS_LOOP_99_12>
+<write_c_i_write_c_j></write_c_i_write_c_j>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -1466,12 +1466,12 @@
 <Average-caseRealTimeLatency>2.600 us</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>2.600 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>257</PipelineInitiationInterval>
-<PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+<PipelineType>loop pipeline stpstp (delay=0 clock cycles(s))</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_98_11_VITIS_LOOP_99_12>
-<Name>VITIS_LOOP_98_11_VITIS_LOOP_99_12</Name>
+<write_c_i_write_c_j>
+<Name>write_c_i_write_c_j</Name>
 <Slack>7.30</Slack>
 <TripCount>256</TripCount>
 <isPerfectNested>0</isPerfectNested>
@@ -1483,19 +1483,19 @@
 <PerformancePragma>-</PerformancePragma>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_98_11_VITIS_LOOP_99_12>
+</write_c_i_write_c_j>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:52</SourceLocation>
+<SourceLocation>../stream_matmul_N64.cpp:71</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_98_11_VITIS_LOOP_99_12>
-<Name>VITIS_LOOP_98_11_VITIS_LOOP_99_12</Name>
+<write_c_i_write_c_j>
+<Name>write_c_i_write_c_j</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:98</SourceLocation>
-</VITIS_LOOP_98_11_VITIS_LOOP_99_12>
+<SourceLocation>../stream_matmul_N64.cpp:153</SourceLocation>
+</write_c_i_write_c_j>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -1521,7 +1521,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Object>
+<Object>stream_matmul_Pipeline_write_c_i_write_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1532,7 +1532,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Object>
+<Object>stream_matmul_Pipeline_write_c_i_write_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1543,7 +1543,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Object>
+<Object>stream_matmul_Pipeline_write_c_i_write_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1554,7 +1554,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Object>
+<Object>stream_matmul_Pipeline_write_c_i_write_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1565,7 +1565,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Object>
+<Object>stream_matmul_Pipeline_write_c_i_write_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1576,7 +1576,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12</Object>
+<Object>stream_matmul_Pipeline_write_c_i_write_c_j</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1689,7 +1689,7 @@
 <Module>
 <Name>stream_matmul</Name>
 <Loops>
-<VITIS_LOOP_63_3></VITIS_LOOP_63_3>
+<k_tile_loop></k_tile_loop>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -1698,46 +1698,51 @@
 <EstimatedClockPeriod>7.256</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>88667</Best-caseLatency>
-<Average-caseLatency>88667</Average-caseLatency>
-<Worst-caseLatency>88667</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.887 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.887 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.887 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>88668</PipelineInitiationInterval>
+<Best-caseLatency>22559</Best-caseLatency>
+<Average-caseLatency>705675</Average-caseLatency>
+<Worst-caseLatency>1410827</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.226 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>7.057 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>14.108 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>22560 ~ 1410828</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_63_3>
-<Name>VITIS_LOOP_63_3</Name>
+<k_tile_loop>
+<Name>k_tile_loop</Name>
 <Slack>7.30</Slack>
-<TripCount>4</TripCount>
+<TripCount>
+<range>
+<min>1</min>
+<max>64</max>
+</range>
+</TripCount>
 <isPerfectNested>0</isPerfectNested>
-<Latency>88144</Latency>
-<AbsoluteTimeLatency>0.881 ms</AbsoluteTimeLatency>
+<Latency>22036 ~ 1410304</Latency>
+<AbsoluteTimeLatency>0.220 ms ~ 14.103 ms</AbsoluteTimeLatency>
 <IterationLatency>22036</IterationLatency>
 <PipelineDepth>22036</PipelineDepth>
 <PipelineType>no</PipelineType>
 <PerformancePragma>-</PerformancePragma>
 <InstanceList>
-<Instance>grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120</Instance>
-<Instance>grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149</Instance>
-<Instance>grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165</Instance>
+<Instance>grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142</Instance>
+<Instance>grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171</Instance>
+<Instance>grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187</Instance>
 </InstanceList>
-</VITIS_LOOP_63_3>
+</k_tile_loop>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:52</SourceLocation>
+<SourceLocation>../stream_matmul_N64.cpp:55</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_63_3>
-<Name>VITIS_LOOP_63_3</Name>
+<k_tile_loop>
+<Name>k_tile_loop</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../stream_matmul.cpp:63</SourceLocation>
-</VITIS_LOOP_63_3>
+<SourceLocation>../stream_matmul_N64.cpp:99</SourceLocation>
+</k_tile_loop>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
@@ -1749,12 +1754,12 @@
 <DSP>5</DSP>
 <AVAIL_DSP>80</AVAIL_DSP>
 <UTIL_DSP>6</UTIL_DSP>
-<FF>1150</FF>
+<FF>1281</FF>
 <AVAIL_FF>35200</AVAIL_FF>
 <UTIL_FF>3</UTIL_FF>
-<LUT>2378</LUT>
+<LUT>2701</LUT>
 <AVAIL_LUT>17600</AVAIL_LUT>
-<UTIL_LUT>13</UTIL_LUT>
+<UTIL_LUT>15</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -1764,188 +1769,188 @@
 <RtlPorts>
 <name>s_axi_control_AWVALID</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_AWREADY</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_AWADDR</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>4</Bits>
+<Bits>5</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WVALID</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WREADY</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WDATA</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WSTRB</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>4</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_ARVALID</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_ARREADY</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_ARADDR</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>4</Bits>
+<Bits>5</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RVALID</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RREADY</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RDATA</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RRESP</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_BVALID</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_BREADY</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_BRESP</name>
 <Object>control</Object>
-<Type>return void</Type>
+<Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>out</Dir>
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
-<CType>unknown</CType>
+<CType>int</CType>
 <HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>

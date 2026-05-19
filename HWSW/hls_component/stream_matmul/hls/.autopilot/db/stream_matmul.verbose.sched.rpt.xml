@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'stream_matmul'" level="0">
-<item name = "Date">Tue May 12 13:33:22 2026
+<item name = "Date">Tue May 19 02:23:54 2026
 </item>
-<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">stream_matmul</item>
 <item name = "Solution">hls (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">88667, 88667, 0.887 ms, 0.887 ms, 88668, 88668, no</column>
+<column name="">22559, 1410827, 0.226 ms, 14.108 ms, 22560, 1410828, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_63_3">88144, 88144, 22036, -, -, 4, no</column>
+<column name="- k_tile_loop">22036, 1410304, 22036, -, -, 1 ~ 64, no</column>
 </table>
 </item>
 </section>

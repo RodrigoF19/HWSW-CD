@@ -1,0 +1,166 @@
+
+
+================================================================
+== Vitis HLS Report for 'stream_matmul_Pipeline_write_c_i_write_c_j'
+================================================================
+* Date:           Tue May 19 02:23:57 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        stream_matmul
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.363 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |      260|      260|  2.600 us|  2.600 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- write_c_i_write_c_j  |      258|      258|         4|          1|          1|   256|       yes|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|    124|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      0|     63|    -|
+|Register         |        -|   -|     36|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     36|    187|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|      1|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln153_1_fu_131_p2           |         +|   0|  0|  14|           9|           1|
+    |add_ln153_fu_148_p2             |         +|   0|  0|  13|           5|           1|
+    |add_ln155_fu_216_p2             |         +|   0|  0|  13|           5|           1|
+    |add_ln158_fu_198_p2             |         +|   0|  0|  15|           8|           8|
+    |ap_block_pp0_stage0_01001_grp1  |       and|   0|  0|   2|           1|           1|
+    |last_fu_210_p2                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln153_fu_125_p2            |      icmp|   0|  0|  13|           9|          10|
+    |icmp_ln155_fu_154_p2            |      icmp|   0|  0|  14|           5|           6|
+    |icmp_ln157_1_fu_204_p2          |      icmp|   0|  0|  13|           5|           4|
+    |icmp_ln157_fu_188_p2            |      icmp|   0|  0|  13|           5|           4|
+    |select_ln153_fu_168_p3          |    select|   0|  0|   5|           1|           5|
+    |select_ln71_fu_160_p3           |    select|   0|  0|   5|           1|           1|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0| 124|          56|          45|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
+    |ap_sig_allocacmp_indvar_flatten42_load  |   9|          2|    9|         18|
+    |i_fu_68                                 |   9|          2|    5|         10|
+    |indvar_flatten42_fu_72                  |   9|          2|    9|         18|
+    |j_fu_64                                 |   9|          2|    5|         10|
+    |out_stream_TDATA_blk_n                  |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  63|         14|   31|         62|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |add_ln158_reg_266                 |  8|   0|    8|          0|
+    |ap_CS_fsm                         |  1|   0|    1|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |  1|   0|    1|          0|
+    |i_fu_68                           |  5|   0|    5|          0|
+    |indvar_flatten42_fu_72            |  9|   0|    9|          0|
+    |j_fu_64                           |  5|   0|    5|          0|
+    |last_reg_271                      |  1|   0|    1|          0|
+    |last_reg_271_pp0_iter2_reg        |  1|   0|    1|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             | 36|   0|   36|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++-------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  stream_matmul_Pipeline_write_c_i_write_c_j|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  stream_matmul_Pipeline_write_c_i_write_c_j|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  stream_matmul_Pipeline_write_c_i_write_c_j|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  stream_matmul_Pipeline_write_c_i_write_c_j|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  stream_matmul_Pipeline_write_c_i_write_c_j|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  stream_matmul_Pipeline_write_c_i_write_c_j|  return value|
+|out_stream_TREADY  |   in|    1|        axis|                         out_stream_V_data_V|       pointer|
+|out_stream_TDATA   |  out|   32|        axis|                         out_stream_V_data_V|       pointer|
+|C_address0         |  out|    8|   ap_memory|                                           C|         array|
+|C_ce0              |  out|    1|   ap_memory|                                           C|         array|
+|C_q0               |   in|   32|   ap_memory|                                           C|         array|
+|out_stream_TVALID  |  out|    1|        axis|                         out_stream_V_last_V|       pointer|
+|out_stream_TLAST   |  out|    1|        axis|                         out_stream_V_last_V|       pointer|
+|out_stream_TKEEP   |  out|    4|        axis|                         out_stream_V_keep_V|       pointer|
+|out_stream_TSTRB   |  out|    4|        axis|                         out_stream_V_strb_V|       pointer|
++-------------------+-----+-----+------------+--------------------------------------------+--------------+
+

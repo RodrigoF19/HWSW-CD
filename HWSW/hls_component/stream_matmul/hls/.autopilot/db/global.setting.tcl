@@ -30,23 +30,20 @@ set ExtraCLdFlags {}
 set SynCheckOptions {}
 set PresynOptions {}
 set PreprocOptions {}
-set SchedOptions {}
-set BindOptions {}
-set RtlGenOptions {}
 set RtlWriterOptions {}
-set CbcGenFlag {}
-set CasGenFlag {}
-set CasMonitorFlag {}
+set CbcGenFlag 0
+set CasGenFlag 0
+set CasMonitorFlag 0
 set AutoSimOptions {}
 set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z010:-clg400:-1
-set SourceFiles {sc {} c ../../../stream_matmul.cpp}
+set SourceFiles {sc {} c ../../../stream_matmul_N64.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog D:/HWSW/tb_stream_matmul.cpp bc D:/HWSW/tb_stream_matmul.cpp vhdl D:/HWSW/tb_stream_matmul.cpp sc D:/HWSW/tb_stream_matmul.cpp cas D:/HWSW/tb_stream_matmul.cpp c {}}
+set TBFiles {verilog C:/Users/rodrigofonseca/Lab1/tb_stream_matmul_N64.cpp bc C:/Users/rodrigofonseca/Lab1/tb_stream_matmul_N64.cpp vhdl C:/Users/rodrigofonseca/Lab1/tb_stream_matmul_N64.cpp sc C:/Users/rodrigofonseca/Lab1/tb_stream_matmul_N64.cpp cas C:/Users/rodrigofonseca/Lab1/tb_stream_matmul_N64.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

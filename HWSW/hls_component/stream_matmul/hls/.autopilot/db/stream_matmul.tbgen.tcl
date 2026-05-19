@@ -6,6 +6,7 @@ set isPipelined 0
 set isPipelined_legacy 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
+set restart_counter_num 0
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
@@ -27,6 +28,7 @@ set C_modelArgList {
 	{ out_stream_V_keep_V int 4 regular {axi_s 1 volatile  { out_stream Keep } }  }
 	{ out_stream_V_strb_V int 4 regular {axi_s 1 volatile  { out_stream Strb } }  }
 	{ out_stream_V_last_V int 1 regular {axi_s 1 volatile  { out_stream Last } }  }
+	{ num_k_tiles int 32 regular {axi_slave 0}  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
@@ -39,7 +41,8 @@ set C_modelArgMapList {[
  	{ "Name" : "out_stream_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
  	{ "Name" : "out_stream_V_keep_V", "interface" : "axis", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
  	{ "Name" : "out_stream_V_strb_V", "interface" : "axis", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "out_stream_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "out_stream_V_last_V", "interface" : "axis", "bitwidth" : 1, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "num_k_tiles", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} ]}
 # RTL Port declarations: 
 set portNum 32
 set portList { 
@@ -59,14 +62,14 @@ set portList {
 	{ out_stream_TLAST sc_out sc_lv 1 signal 7 } 
 	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_AWREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_AWADDR sc_in sc_lv 4 signal -1 } 
+	{ s_axi_control_AWADDR sc_in sc_lv 5 signal -1 } 
 	{ s_axi_control_WVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_WREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_WDATA sc_in sc_lv 32 signal -1 } 
 	{ s_axi_control_WSTRB sc_in sc_lv 4 signal -1 } 
 	{ s_axi_control_ARVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_ARREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_ARADDR sc_in sc_lv 4 signal -1 } 
+	{ s_axi_control_ARADDR sc_in sc_lv 5 signal -1 } 
 	{ s_axi_control_RVALID sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_RREADY sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_RDATA sc_out sc_lv 32 signal -1 } 
@@ -77,14 +80,14 @@ set portList {
 	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"stream_matmul","role":"start","value":"0","valid_bit":"0"},{"name":"stream_matmul","role":"continue","value":"0","valid_bit":"4"},{"name":"stream_matmul","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"stream_matmul","role":"start","value":"0","valid_bit":"0"},{"name":"stream_matmul","role":"continue","value":"0","valid_bit":"4"},{"name":"stream_matmul","role":"auto_start","value":"0","valid_bit":"7"},{"name":"num_k_tiles","role":"data","value":"16"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
 	{ "name": "s_axi_control_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WREADY" } },
 	{ "name": "s_axi_control_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "WDATA" } },
 	{ "name": "s_axi_control_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "WSTRB" } },
-	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"stream_matmul","role":"start","value":"0","valid_bit":"0"},{"name":"stream_matmul","role":"done","value":"0","valid_bit":"1"},{"name":"stream_matmul","role":"idle","value":"0","valid_bit":"2"},{"name":"stream_matmul","role":"ready","value":"0","valid_bit":"3"},{"name":"stream_matmul","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"stream_matmul","role":"start","value":"0","valid_bit":"0"},{"name":"stream_matmul","role":"done","value":"0","valid_bit":"1"},{"name":"stream_matmul","role":"idle","value":"0","valid_bit":"2"},{"name":"stream_matmul","role":"ready","value":"0","valid_bit":"3"},{"name":"stream_matmul","role":"auto_start","value":"0","valid_bit":"7"}] },
 	{ "name": "s_axi_control_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARVALID" } },
 	{ "name": "s_axi_control_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARREADY" } },
 	{ "name": "s_axi_control_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RVALID" } },
@@ -119,10 +122,11 @@ set ArgLastReadFirstWriteLatency {
 		out_stream_V_data_V {Type O LastRead -1 FirstWrite 3}
 		out_stream_V_keep_V {Type O LastRead -1 FirstWrite 3}
 		out_stream_V_strb_V {Type O LastRead -1 FirstWrite 3}
-		out_stream_V_last_V {Type O LastRead -1 FirstWrite 3}}
-	stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2 {
+		out_stream_V_last_V {Type O LastRead -1 FirstWrite 3}
+		num_k_tiles {Type I LastRead 0 FirstWrite -1}}
+	stream_matmul_Pipeline_init_c_i_init_c_j {
 		C {Type O LastRead -1 FirstWrite 2}}
-	stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5 {
+	stream_matmul_Pipeline_read_a_i_read_a_j {
 		A {Type O LastRead -1 FirstWrite 2}
 		A_1 {Type O LastRead -1 FirstWrite 2}
 		A_2 {Type O LastRead -1 FirstWrite 2}
@@ -131,13 +135,13 @@ set ArgLastReadFirstWriteLatency {
 		in_stream_V_keep_V {Type I LastRead 2 FirstWrite -1}
 		in_stream_V_strb_V {Type I LastRead 2 FirstWrite -1}
 		in_stream_V_last_V {Type I LastRead 2 FirstWrite -1}}
-	stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12 {
+	stream_matmul_Pipeline_write_c_i_write_c_j {
 		C {Type I LastRead 2 FirstWrite -1}
 		out_stream_V_data_V {Type O LastRead -1 FirstWrite 3}
 		out_stream_V_keep_V {Type O LastRead -1 FirstWrite 3}
 		out_stream_V_strb_V {Type O LastRead -1 FirstWrite 3}
 		out_stream_V_last_V {Type O LastRead -1 FirstWrite 3}}
-	stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7 {
+	stream_matmul_Pipeline_read_b_i_read_b_j {
 		B {Type O LastRead -1 FirstWrite 2}
 		B_1 {Type O LastRead -1 FirstWrite 2}
 		B_2 {Type O LastRead -1 FirstWrite 2}
@@ -146,7 +150,7 @@ set ArgLastReadFirstWriteLatency {
 		in_stream_V_keep_V {Type I LastRead 2 FirstWrite -1}
 		in_stream_V_strb_V {Type I LastRead 2 FirstWrite -1}
 		in_stream_V_last_V {Type I LastRead 2 FirstWrite -1}}
-	stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10 {
+	stream_matmul_Pipeline_compute_i_compute_j_compute_k {
 		A {Type I LastRead 2 FirstWrite -1}
 		A_1 {Type I LastRead 2 FirstWrite -1}
 		A_2 {Type I LastRead 2 FirstWrite -1}
@@ -160,8 +164,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "88667", "Max" : "88667"}
-	, {"Name" : "Interval", "Min" : "88668", "Max" : "88668"}
+	{"Name" : "Latency", "Min" : "22559", "Max" : "1410827"}
+	, {"Name" : "Interval", "Min" : "22560", "Max" : "1410828"}
 ]}
 
 set PipelineEnableSignalInfo {[

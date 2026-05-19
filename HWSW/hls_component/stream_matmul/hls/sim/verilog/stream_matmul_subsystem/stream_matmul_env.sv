@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -16,7 +16,7 @@
                                                                                                                     
         svr_pkg::svr_env#(41) env_master_svr_in_stream;
         svr_pkg::svr_env#(41) env_slave_svr_out_stream;
-        axi_pkg::axi_env#(4,4,4,3,1) axi_lite_control;
+        axi_pkg::axi_env#(5,4,4,3,1) axi_lite_control;
                                                                                                                     
         stream_matmul_reference_model   refm;                                                                         
                                                                                                                     
@@ -65,7 +65,7 @@
         stream_matmul_cfg.control_cfg.drv_type = axi_pkg::MASTER;
         stream_matmul_cfg.control_cfg.reset_level = axi_pkg::RESET_LEVEL_LOW;
         uvm_config_db#(axi_pkg::axi_cfg)::set(this, "axi_lite_control*", "cfg", stream_matmul_cfg.control_cfg);
-        axi_lite_control = axi_pkg::axi_env#(4,4,4,3,1)::type_id::create("axi_lite_control", this);
+        axi_lite_control = axi_pkg::axi_env#(5,4,4,3,1)::type_id::create("axi_lite_control", this);
 
 
 

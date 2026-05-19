@@ -1,6 +1,6 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-# Tool Version Limit: 2025.05
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+# Tool Version Limit: 2025.11
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
@@ -23,21 +23,21 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../tb_stream_matmul.cpp ../../../../../stream_matmul.cpp
+HLS_SOURCES = ../../../../../tb_stream_matmul_N64.cpp ../../../../../stream_matmul_N64.cpp
 
 override TARGET := csim.exe
 
-AUTOPILOT_ROOT := D:/2025.1/Vitis
+AUTOPILOT_ROOT := C:/AMDDesignTools/2025.2/Vitis
 AUTOPILOT_MACH := win64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := D:/2025.1/Vitis/tps/win64/msys64/mingw64/bin
+  AP_GCC_PATH := C:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
-AP_CLANG_PATH := ${XILINX_VCXX}/libexec
+AP_CLANG_PATH := ${AUTOPILOT_ROOT}/win64/tools/clang-16/bin
 AUTOPILOT_TECH := ${AUTOPILOT_ROOT}/common/technology
 
 
@@ -70,11 +70,13 @@ DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type
 CCFLAG += -Wno-abi
 CCFLAG += -fdebug-default-version=4
-CCFLAG += --sysroot=D:/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt
+CCFLAG += --sysroot=C:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt
 CCFLAG += -Werror=uninitialized
 CCFLAG += -Wno-c++11-narrowing
 CCFLAG += -Wno-error=sometimes-uninitialized
-LFLAG += --sysroot=D:/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt
+LFLAG += --sysroot=C:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt
+CCFLAG += --target=x86_64-w64-windows-gnu
+LFLAG += --target=x86_64-w64-windows-gnu
 
 
 
@@ -84,14 +86,14 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/tb_stream_matmul.o: ../../../../../tb_stream_matmul.cpp $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../../tb_stream_matmul.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/tb_stream_matmul_N64.o: ../../../../../tb_stream_matmul_N64.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../../tb_stream_matmul_N64.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/tb_stream_matmul.d
+-include $(ObjDir)/tb_stream_matmul_N64.d
 
-$(ObjDir)/stream_matmul.o: ../../../../../stream_matmul.cpp $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../../stream_matmul.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/stream_matmul_N64.o: ../../../../../stream_matmul_N64.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../../stream_matmul_N64.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD  -fhls-csim -fhlstoplevel=stream_matmul $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/stream_matmul.d
+-include $(ObjDir)/stream_matmul_N64.d

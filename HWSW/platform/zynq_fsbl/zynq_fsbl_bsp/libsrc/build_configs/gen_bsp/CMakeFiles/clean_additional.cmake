@@ -3,17 +3,17 @@ cmake_minimum_required(VERSION 3.16)
 
 if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   file(REMOVE_RECURSE
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/diskio.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/ff.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/ffconf.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/sleep.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs_config.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/xilrsa.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/xiltimer.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/include/xtimer_config.h"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/lib/libxilffs.a"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/lib/libxilrsa.a"
-  "/home/public/Desktop/paulo/HWSW/platform/zynq_fsbl/zynq_fsbl_bsp/lib/libxiltimer.a"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\diskio.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\ff.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\ffconf.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\sleep.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\xilffs.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\xilffs_config.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\xilrsa.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\xiltimer.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\include\\xtimer_config.h"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\lib\\libxilffs.a"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\lib\\libxilrsa.a"
+  "C:\\Users\\rodrigofonseca\\Lab1\\platform\\zynq_fsbl\\zynq_fsbl_bsp\\lib\\libxiltimer.a"
   )
 endif()

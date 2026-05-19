@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -104,10 +104,15 @@
                                                                             
 
             fork                                                                               
+                forever begin
+                    @refm.allaxilite_write_data_finish;
+                    `uvm_info(this.get_full_name(), "receive allaxilite_write_finish axilite write_mem_page_process", UVM_LOW)
+                    void'(refm.mem_blk_pages_control_num_k_tiles.pages.pop_front());
+                end
                                                                                                
-                forever begin                                                                  
-                    @refm.dut2tb_ap_done;                                                             
-                    `uvm_info(this.get_full_name(), "receive ap_done_for_nexttrans and do axim dump", UVM_LOW)           
+                forever begin
+                    @refm.dut2tb_ap_done;
+                    `uvm_info(this.get_full_name(), "receive dut2tb_ap_done and do axim dump", UVM_LOW)
                     file_wr_port_out_stream_out_stream_TDATA.receive_ap_done();
                     file_wr_port_out_stream_out_stream_TKEEP.receive_ap_done();
                     file_wr_port_out_stream_out_stream_TSTRB.receive_ap_done();

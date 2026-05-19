@@ -24,18 +24,17 @@
             <top_module name="uvm_pkg" />
             <top_module name="vital_primitives" />
             <top_module name="vital_timing" />
-            <top_module name="vpkg" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="10.702128 us"></ZoomEndTime>
-      <Cursor1Time time="0.000000 us"></Cursor1Time>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="257"></NameColumnWidth>
-      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wvobject fp_name="HLS Process Summary Group" type="group">
@@ -56,85 +55,85 @@
          <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul//AESL_inst_stream_matmul_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul//AESL_inst_stream_matmul_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul//AESL_inst_stream_matmul_activity.dataflowTxTooltipData</obj_property>
-         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity" type="group">
-            <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity</obj_property>
+         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity" type="group">
+            <obj_property name="label">grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity</obj_property>
+            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity" type="group">
-            <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity</obj_property>
+         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity" type="group">
+            <obj_property name="label">grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity</obj_property>
+            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity" type="group">
-            <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity</obj_property>
+         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity" type="group">
+            <obj_property name="label">grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity</obj_property>
+            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity" type="group">
-            <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity</obj_property>
+         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity" type="group">
+            <obj_property name="label">grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity</obj_property>
+            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity" type="group">
-            <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity</obj_property>
+         <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity" type="group">
+            <obj_property name="label">grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity</obj_property>
+            <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -145,25 +144,25 @@
    <wvobject fp_name="AESL_inst_stream_matmul_group" type="group">
       <obj_property name="label">AESL_inst_stream_matmul</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity" type="protoinst">
-         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_activity</obj_property>
+      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity" type="protoinst">
+         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_activity</obj_property>
       </wvobject>
-      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity" type="protoinst">
-         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_activity</obj_property>
+      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity" type="protoinst">
+         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_activity</obj_property>
       </wvobject>
-      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity" type="protoinst">
-         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_activity</obj_property>
+      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity" type="protoinst">
+         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_activity</obj_property>
       </wvobject>
-      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity" type="protoinst">
-         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_activity</obj_property>
+      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity" type="protoinst">
+         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_activity</obj_property>
       </wvobject>
-      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity" type="protoinst">
-         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_activity</obj_property>
+      <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity" type="protoinst">
+         <obj_property name="ElementShortName">grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_activity</obj_property>
       </wvobject>
       <wvobject fp_name="AESL_inst_stream_matmul_Handshake_group" type="group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -181,101 +180,101 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_group" type="group">
-         <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114</obj_property>
+      <wvobject fp_name="grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_group" type="group">
+         <obj_property name="label">grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114_Handshake_group" type="group">
+         <wvobject fp_name="grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136_Handshake_group" type="group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/ap_start" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/ap_start" type="logic">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/ap_ready" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/ap_ready" type="logic">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2_fu_114/ap_done" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_init_c_i_init_c_j_fu_136/ap_done" type="logic">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_group" type="group">
-         <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120</obj_property>
+      <wvobject fp_name="grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_group" type="group">
+         <obj_property name="label">grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120_Handshake_group" type="group">
+         <wvobject fp_name="grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142_Handshake_group" type="group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/ap_start" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/ap_start" type="logic">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/ap_ready" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/ap_ready" type="logic">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5_fu_120/ap_done" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_a_i_read_a_j_fu_142/ap_done" type="logic">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_group" type="group">
-         <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136</obj_property>
+      <wvobject fp_name="grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_group" type="group">
+         <obj_property name="label">grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136_Handshake_group" type="group">
+         <wvobject fp_name="grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158_Handshake_group" type="group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/ap_start" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/ap_start" type="logic">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/ap_ready" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/ap_ready" type="logic">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12_fu_136/ap_done" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_write_c_i_write_c_j_fu_158/ap_done" type="logic">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_group" type="group">
-         <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149</obj_property>
+      <wvobject fp_name="grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_group" type="group">
+         <obj_property name="label">grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149_Handshake_group" type="group">
+         <wvobject fp_name="grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171_Handshake_group" type="group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/ap_start" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/ap_start" type="logic">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/ap_ready" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/ap_ready" type="logic">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7_fu_149/ap_done" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_read_b_i_read_b_j_fu_171/ap_done" type="logic">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_group" type="group">
-         <obj_property name="label">grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165</obj_property>
+      <wvobject fp_name="grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_group" type="group">
+         <obj_property name="label">grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165_Handshake_group" type="group">
+         <wvobject fp_name="grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187_Handshake_group" type="group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/ap_start" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/ap_start" type="logic">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/ap_ready" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/ap_ready" type="logic">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10_fu_165/ap_done" type="logic">
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/grp_stream_matmul_Pipeline_compute_i_compute_j_compute_k_fu_187/ap_done" type="logic">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
@@ -286,45 +285,11 @@
       <obj_property name="label">Design Top Signals</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="group93" type="group">
-         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="label">C InOuts</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="group94" type="group">
-            <obj_property name="label">return(axi_slave)</obj_property>
+            <obj_property name="label">num_k_tiles__return(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TLAST" type="array">
-               <obj_property name="ElementShortName">out_stream_TLAST[0:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TLAST[0:0]</obj_property>
-               <obj_property name="CustomSignalColor">#ffff00</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TSTRB" type="array">
-               <obj_property name="ElementShortName">out_stream_TSTRB[3:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TSTRB[3:0]</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TKEEP" type="array">
-               <obj_property name="ElementShortName">out_stream_TKEEP[3:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TKEEP[3:0]</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TREADY" type="logic">
-               <obj_property name="ElementShortName">out_stream_TREADY</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TREADY</obj_property>
-               <obj_property name="CustomSignalColor">#ffff00</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TVALID" type="logic">
-               <obj_property name="ElementShortName">out_stream_TVALID</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TVALID</obj_property>
-               <obj_property name="CustomSignalColor">#ffff00</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TDATA" type="array">
-               <obj_property name="ElementShortName">out_stream_TDATA[31:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TDATA[31:0]</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/interrupt" type="logic">
                <obj_property name="ElementShortName">interrupt</obj_property>
                <obj_property name="ObjectShortName">interrupt</obj_property>
@@ -383,8 +348,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_ARADDR" type="array">
-               <obj_property name="ElementShortName">s_axi_control_ARADDR[3:0]</obj_property>
-               <obj_property name="ObjectShortName">s_axi_control_ARADDR[3:0]</obj_property>
+               <obj_property name="ElementShortName">s_axi_control_ARADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_control_ARADDR[4:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_WSTRB" type="array">
@@ -422,16 +387,58 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/s_axi_control_AWADDR" type="array">
-               <obj_property name="ElementShortName">s_axi_control_AWADDR[3:0]</obj_property>
-               <obj_property name="ObjectShortName">s_axi_control_AWADDR[3:0]</obj_property>
+               <obj_property name="ElementShortName">s_axi_control_AWADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_control_AWADDR[4:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group119" type="group">
+      <wvobject fp_name="group113" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group114" type="group">
+            <obj_property name="label">return(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TLAST" type="array">
+               <obj_property name="ElementShortName">out_stream_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TSTRB" type="array">
+               <obj_property name="ElementShortName">out_stream_TSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TKEEP" type="array">
+               <obj_property name="ElementShortName">out_stream_TKEEP[3:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TKEEP[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TREADY" type="logic">
+               <obj_property name="ElementShortName">out_stream_TREADY</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TVALID" type="logic">
+               <obj_property name="ElementShortName">out_stream_TVALID</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/out_stream_TDATA" type="array">
+               <obj_property name="ElementShortName">out_stream_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group121" type="group">
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group120" type="group">
+         <wvobject fp_name="group122" type="group">
             <obj_property name="label">return(axis)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/in_stream_TLAST" type="array">
@@ -470,7 +477,7 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group127" type="group">
+      <wvobject fp_name="group129" type="group">
          <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/ap_done" type="logic">
@@ -490,7 +497,7 @@
             <obj_property name="ObjectShortName">ap_start</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group132" type="group">
+      <wvobject fp_name="group134" type="group">
          <obj_property name="label">Reset</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/ap_rst_n" type="logic">
@@ -498,7 +505,7 @@
             <obj_property name="ObjectShortName">ap_rst_n</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group134" type="group">
+      <wvobject fp_name="group136" type="group">
          <obj_property name="label">Clock</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_stream_matmul_top/AESL_inst_stream_matmul/ap_clk" type="logic">
@@ -507,13 +514,13 @@
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group136" type="group">
+   <wvobject fp_name="group138" type="group">
       <obj_property name="label">Test Bench Signals</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group137" type="group">
+      <wvobject fp_name="group139" type="group">
          <obj_property name="label">Internal Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group138" type="group">
+         <wvobject fp_name="group140" type="group">
             <obj_property name="label">Simulation Status</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_stream_matmul_top/AUTOTB_TRANSACTION_NUM" type="array">
@@ -532,7 +539,7 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group139" type="group">
+         <wvobject fp_name="group141" type="group">
             <obj_property name="label">Port Depth</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_stream_matmul_top/LENGTH_in_stream_V_data_V" type="array">
@@ -553,6 +560,11 @@
             <wvobject fp_name="/apatb_stream_matmul_top/LENGTH_in_stream_V_strb_V" type="array">
                <obj_property name="ElementShortName">LENGTH_in_stream_V_strb_V[31:0]</obj_property>
                <obj_property name="ObjectShortName">LENGTH_in_stream_V_strb_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/LENGTH_num_k_tiles" type="array">
+               <obj_property name="ElementShortName">LENGTH_num_k_tiles[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_num_k_tiles[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/LENGTH_out_stream_V_data_V" type="array">
@@ -577,46 +589,12 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group151" type="group">
-         <obj_property name="label">C Outputs</obj_property>
+      <wvobject fp_name="group154" type="group">
+         <obj_property name="label">C InOuts</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group152" type="group">
-            <obj_property name="label">return(axi_slave)</obj_property>
+         <wvobject fp_name="group155" type="group">
+            <obj_property name="label">num_k_tiles__return(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TLAST" type="array">
-               <obj_property name="ElementShortName">out_stream_TLAST[0:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TLAST[0:0]</obj_property>
-               <obj_property name="CustomSignalColor">#ffff00</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TSTRB" type="array">
-               <obj_property name="ElementShortName">out_stream_TSTRB[3:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TSTRB[3:0]</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TKEEP" type="array">
-               <obj_property name="ElementShortName">out_stream_TKEEP[3:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TKEEP[3:0]</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TREADY" type="logic">
-               <obj_property name="ElementShortName">out_stream_TREADY</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TREADY</obj_property>
-               <obj_property name="CustomSignalColor">#ffff00</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TVALID" type="logic">
-               <obj_property name="ElementShortName">out_stream_TVALID</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TVALID</obj_property>
-               <obj_property name="CustomSignalColor">#ffff00</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-            </wvobject>
-            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TDATA" type="array">
-               <obj_property name="ElementShortName">out_stream_TDATA[31:0]</obj_property>
-               <obj_property name="ObjectShortName">out_stream_TDATA[31:0]</obj_property>
-               <obj_property name="Radix">HEXRADIX</obj_property>
-            </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/control_INTERRUPT" type="logic">
                <obj_property name="ElementShortName">control_INTERRUPT</obj_property>
                <obj_property name="ObjectShortName">control_INTERRUPT</obj_property>
@@ -675,8 +653,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/control_ARADDR" type="array">
-               <obj_property name="ElementShortName">control_ARADDR[3:0]</obj_property>
-               <obj_property name="ObjectShortName">control_ARADDR[3:0]</obj_property>
+               <obj_property name="ElementShortName">control_ARADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">control_ARADDR[4:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/control_WSTRB" type="array">
@@ -714,16 +692,58 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_stream_matmul_top/control_AWADDR" type="array">
-               <obj_property name="ElementShortName">control_AWADDR[3:0]</obj_property>
-               <obj_property name="ObjectShortName">control_AWADDR[3:0]</obj_property>
+               <obj_property name="ElementShortName">control_AWADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">control_AWADDR[4:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group177" type="group">
+      <wvobject fp_name="group174" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group175" type="group">
+            <obj_property name="label">return(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TLAST" type="array">
+               <obj_property name="ElementShortName">out_stream_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TSTRB" type="array">
+               <obj_property name="ElementShortName">out_stream_TSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TKEEP" type="array">
+               <obj_property name="ElementShortName">out_stream_TKEEP[3:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TKEEP[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TREADY" type="logic">
+               <obj_property name="ElementShortName">out_stream_TREADY</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TVALID" type="logic">
+               <obj_property name="ElementShortName">out_stream_TVALID</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_stream_matmul_top/out_stream_TDATA" type="array">
+               <obj_property name="ElementShortName">out_stream_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">out_stream_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group182" type="group">
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group178" type="group">
+         <wvobject fp_name="group183" type="group">
             <obj_property name="label">return(axis)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_stream_matmul_top/in_stream_TLAST" type="array">

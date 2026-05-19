@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file D:\HWSW\project_matmul\project_matmul.runs\design_1_stream_matmul_0_0_synth_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permissão negada

@@ -28,7 +28,7 @@
 			xlnx,m-axi-mm2s-data-width = <32>;
 			xlnx,num-s2mm-channels = <1>;
 			xlnx,dlytmr-resolution = <125>;
-			xlnx,sg-length-width = <14>;
+			xlnx,sg-length-width = <18>;
 			xlnx,prmry-is-aclk-async = <0>;
 			xlnx,include-s2mm-sf = <1>;
 			#dma-cells = <1>;
@@ -73,9 +73,9 @@
 		};
 		stream_matmul_0: stream_matmul@40000000 {
 			compatible = "xlnx,stream-matmul-1.0";
-			xlnx,ii = <88668>;
+			xlnx,ii = "22560 , ~ , 1410828";
 			xlnx,machine = <64>;
-			xlnx,s-axi-control-addr-width = <4>;
+			xlnx,s-axi-control-addr-width = <5>;
 			xlnx,ip-name = "stream_matmul";
 			reg = <0x40000000 0x10000>;
 			clocks = <&clkc 15>;
@@ -85,7 +85,7 @@
 			status = "okay";
 			clock-names = "ap_clk";
 			xlnx,combinational = <0>;
-			xlnx,latency = <88667>;
+			xlnx,latency = <22559>;
 			xlnx,name = "stream_matmul_0";
 		};
 	};

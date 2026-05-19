@@ -1,13 +1,13 @@
 create libxil.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src/libxadcps.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/libuartps.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stream_matmul/src/libstream_matmul.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src/libscuwdt.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src/libscutimer.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/libscugic.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src/libdmaps.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src/libdevcfg.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src/libcoresightps_dcc.a
-addlib /home/public/Desktop/paulo/HWSW/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/axidma/src/libaxidma.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src/libxadcps.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/libuartps.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stream_matmul/src/libstream_matmul.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src/libscuwdt.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src/libscutimer.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/libscugic.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src/libdmaps.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src/libdevcfg.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src/libcoresightps_dcc.a
+addlib C:/Users/rodrigofonseca/Lab1/platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/axidma/src/libaxidma.a
 save
 end

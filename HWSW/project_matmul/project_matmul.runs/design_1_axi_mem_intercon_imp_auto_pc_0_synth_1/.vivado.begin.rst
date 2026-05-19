@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="public" Host="carcavelos.acc.edu" Pid="19336" HostCore="12" HostMemory="14188628">
-    </Process>
-</ProcessHandle>

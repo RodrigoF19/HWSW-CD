@@ -1,71 +1,8 @@
 {
     "1": {
-        "name": "stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12",
-        "file": "..\/stream_matmul.cpp",
-        "fileloc": "52",
-        "instructions": "40",
-        "total_instructions": "40",
-        "calls": "",
-        "basicblocks": "4",
-        "memory_accesses": "8",
-        "control_depth": "1",
-        "def_use_depth": "1",
-        "loads": {
-            "L": "4"
-        },
-        "stores": {
-            "L": "6"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "0": {
-        "name": "stream_matmul",
-        "file": "stream_matmul.cpp",
-        "fileloc": "38",
-        "instructions": "40",
-        "total_instructions": "310",
-        "calls": "2 5 4 3 1",
-        "basicblocks": "4",
-        "memory_accesses": "0",
-        "control_depth": "0",
-        "def_use_depth": "1",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "2": {
-        "name": "stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2",
-        "file": "..\/stream_matmul.cpp",
-        "fileloc": "52",
-        "instructions": "33",
-        "total_instructions": "33",
-        "calls": "",
-        "basicblocks": "4",
-        "memory_accesses": "7",
-        "control_depth": "1",
-        "def_use_depth": "1",
-        "loads": {
-            "L": "3"
-        },
-        "stores": {
-            "L": "7"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "3": {
-        "name": "stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10",
-        "file": "..\/stream_matmul.cpp",
-        "fileloc": "52",
+        "name": "stream_matmul_Pipeline_compute_i_compute_j_compute_k",
+        "file": "..\/stream_matmul_N64.cpp",
+        "fileloc": "71",
         "instructions": "92",
         "total_instructions": "92",
         "calls": "",
@@ -83,10 +20,73 @@
             "L": "1"
         }
     },
+    "2": {
+        "name": "stream_matmul_Pipeline_read_a_i_read_a_j",
+        "file": "..\/stream_matmul_N64.cpp",
+        "fileloc": "71",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "9",
+        "memory_accesses": "11",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "stream_matmul_Pipeline_init_c_i_init_c_j",
+        "file": "..\/stream_matmul_N64.cpp",
+        "fileloc": "71",
+        "instructions": "33",
+        "total_instructions": "33",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "7",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
     "4": {
-        "name": "stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7",
-        "file": "..\/stream_matmul.cpp",
-        "fileloc": "52",
+        "name": "stream_matmul_Pipeline_write_c_i_write_c_j",
+        "file": "..\/stream_matmul_N64.cpp",
+        "fileloc": "71",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "stream_matmul_Pipeline_read_b_i_read_b_j",
+        "file": "..\/stream_matmul_N64.cpp",
+        "fileloc": "71",
         "instructions": "53",
         "total_instructions": "53",
         "calls": "",
@@ -104,22 +104,22 @@
             "L": "1"
         }
     },
-    "5": {
-        "name": "stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5",
-        "file": "..\/stream_matmul.cpp",
-        "fileloc": "52",
-        "instructions": "52",
-        "total_instructions": "52",
-        "calls": "",
-        "basicblocks": "9",
-        "memory_accesses": "11",
-        "control_depth": "2",
-        "def_use_depth": "1",
+    "0": {
+        "name": "stream_matmul",
+        "file": "stream_matmul_N64.cpp",
+        "fileloc": "55",
+        "instructions": "51",
+        "total_instructions": "321",
+        "calls": "3 2 5 1 4",
+        "basicblocks": "4",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5",
         "loads": {
-            "L": "3"
+            "L": "1"
         },
         "stores": {
-            "L": "10"
+            "L": "2"
         },
         "loops": {
             "L": "1"

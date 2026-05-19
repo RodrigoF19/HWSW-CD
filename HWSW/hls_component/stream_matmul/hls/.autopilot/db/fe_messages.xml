@@ -1,81 +1,95 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:149:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:149:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:154:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:154:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:219:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:255:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:332:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:372:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:340:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:380:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:349:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:389:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:360:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:400:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:372:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:412:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:383:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:423:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/2025.1/Vitis/common/technology/autopilot\ap_axi_sdata.h:400:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:440:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=stream_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:41:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:59:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:42:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:60:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:43:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:61:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=num_k_tiles bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:49:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=A cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:62:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:50:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=B cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:68:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=A cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:57:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:69:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=B cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:68:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:90:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:76:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:100:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=64" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:88:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:109:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../stream_matmul.cpp:100:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:121:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="../stream_matmul.cpp:40:0" msg_body="Unrolling loop 'VITIS_LOOP_87_10' (../stream_matmul.cpp:87:35) in function 'stream_matmul' partially with a factor of 4">
-        <args Factor="4" LoopLoc="../stream_matmul.cpp:87:35" LoopName="VITIS_LOOP_87_10"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:139:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../stream_matmul.cpp:40:0" msg_body="Inlining function 'axis_to_float(hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;)' into 'stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
-        <args Callee="axis_to_float(hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;)" Callee-DebugLoc="File ../stream_matmul.cpp Line 17 Column 0" Caller="stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../stream_matmul.cpp Line 40 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../stream_matmul_N64.cpp:156:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="stream_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../stream_matmul.cpp:40:0" msg_body="Inlining function 'float_to_axis(float, bool)' into 'stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
-        <args Callee="float_to_axis(float, bool)" Callee-DebugLoc="File ../stream_matmul.cpp Line 24 Column 0" Caller="stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../stream_matmul.cpp Line 40 Column 0"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:58:0" msg_body="Unrolling loop 'compute_k' (../stream_matmul_N64.cpp:138:17) in function 'stream_matmul' partially with a factor of 4">
+        <args Factor="4" LoopLoc="../stream_matmul_N64.cpp:138:17" LoopName="compute_k"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../stream_matmul.cpp:45:8" msg_body="Applying array_partition to 'A': Cyclic partitioning with factor 4 on dimension 2.">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:41:0" msg_body="Inlining function 'hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;::axis()' into 'float_to_axis(float, bool)'">
+        <args Callee="hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;::axis()" Callee-DebugLoc="File {C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h} Line 217 Column 0" Caller="float_to_axis(float, bool)" Caller-DebugLoc="File ../stream_matmul_N64.cpp Line 41 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:58:0" msg_body="Inlining function 'hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;::axis()' into 'stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, int)'">
+        <args Callee="hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;::axis()" Callee-DebugLoc="File {C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h} Line 217 Column 0" Caller="stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, int)" Caller-DebugLoc="File ../stream_matmul_N64.cpp Line 58 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:58:0" msg_body="Inlining function 'axis_to_float(hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;)' into 'stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, int)'">
+        <args Callee="axis_to_float(hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;)" Callee-DebugLoc="File ../stream_matmul_N64.cpp Line 34 Column 0" Caller="stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, int)" Caller-DebugLoc="File ../stream_matmul_N64.cpp Line 58 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:58:0" msg_body="Inlining function 'float_to_axis(float, bool)' into 'stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, int)'">
+        <args Callee="float_to_axis(float, bool)" Callee-DebugLoc="File ../stream_matmul_N64.cpp Line 41 Column 0" Caller="stream_matmul(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, int)" Caller-DebugLoc="File ../stream_matmul_N64.cpp Line 58 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:64:11" msg_body="Applying array_partition to 'A': Cyclic partitioning with factor 4 on dimension 2.">
         <args Dim="2" Factor="4" Mode="Cyclic" UOName="A"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../stream_matmul.cpp:46:11" msg_body="Applying array_partition to 'B': Cyclic partitioning with factor 4 on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:65:11" msg_body="Applying array_partition to 'B': Cyclic partitioning with factor 4 on dimension 1.">
         <args Dim="1" Factor="4" Mode="Cyclic" UOName="B"/>
     </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../stream_matmul_N64.cpp:138:17" msg_body="pipeline   1 stream_matmul config_compile -pipeline_loops 64compute_k ../stream_matmul_N64.cpp:138:17">
+        <args LoopLoc="../stream_matmul_N64.cpp:138:17" LoopLoc-DebugLoc="File ../stream_matmul_N64.cpp Line 138 Column 17" LoopName="compute_k" PragmaFunction="stream_matmul" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
 </xilinx:hls_fe_msgs>
-
