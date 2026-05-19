@@ -1,20 +1,20 @@
 {
   "0": {
-    "basicblocks": 35,
+    "basicblocks": 47,
     "calls": "",
     "control_depth": 2,
-    "def_use_depth": 7,
-    "file": "stream_matmul.cpp",
-    "fileloc": 38,
-    "instructions": 288,
+    "def_use_depth": 37,
+    "file": "stream_matmul_fixedPoint.cpp",
+    "fileloc": 67,
+    "instructions": 449,
     "loads": {
       "L": 18
     },
-    "memory_accesses": 41,
+    "memory_accesses": 38,
     "name": "stream_matmul",
     "stores": {
-      "L": 20
+      "L": 22
     },
-    "total_instructions": 310
+    "total_instructions": 467
   }
 }

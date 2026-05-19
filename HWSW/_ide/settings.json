@@ -1,9 +1,8 @@
 {
     "clangd.fallbackFlags": [
-        "-ID:\\2025.1\\Vitis\\include",
-        "-ID:\\2025.1\\Vitis\\include\\etc",
-        "-ID:\\2025.1\\Vitis\\include\\ap_sysc",
-        "-ID:\\2025.1\\Vitis\\win64\\tools\\auto_cc\\include",
-        "-ID:\\2025.1\\Vitis\\win64\\tools\\systemc\\include"
-    ]
+        "-IC:\\AMDDesignTools\\2025.2\\Vitis\\include",
+        "-IC:\\AMDDesignTools\\2025.2\\Vitis\\include\\etc",
+        "-IC:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\auto_cc\\include"
+    ],
+    "vitis.build.application –PlatformBuildDependency": "always"
 }

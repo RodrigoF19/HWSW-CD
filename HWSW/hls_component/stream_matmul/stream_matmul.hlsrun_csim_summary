@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "D:/HWSW\\hls_component\\stream_matmul\\stream_matmul.hlsrun_csim_summary",
+ "thisFile": "C:/Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component\\stream_matmul\\stream_matmul.hlsrun_csim_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,34 +9,34 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "05/12/26 14:08:20",
- "timestampMillis": "1778591300614",
+ "dateTimestamp": "05/19/26 16:42:13",
+ "timestampMillis": "1779205333300",
  "buildStep": {
-  "cmdId": "40e79c9b-e8f3-4b37-a579-6800437a5067",
+  "cmdId": "6e5464a1-c91b-4fe8-98aa-1a587bb6c2f1",
   "name": "vitis-run",
-  "logFile": "D:/HWSW\\hls_component\\stream_matmul\\logs\\stream_matmul.steps.log",
-  "commandLine": "D:/2025.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config D:\\HWSW\\hls_component\\hls_config.cfg --work_dir stream_matmul ",
+  "logFile": "C:/Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component\\stream_matmul\\logs\\stream_matmul.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component\\hls_config.cfg --work_dir stream_matmul ",
   "args": [
    "--mode",
    "hls",
    "--csim",
    "--config",
-   "D:\\HWSW\\hls_component\\hls_config.cfg",
+   "C:\\Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component\\hls_config.cfg",
    "--work_dir",
    "stream_matmul"
   ],
   "iniFiles": [],
-  "cwd": "D:\\HWSW\\hls_component"
+  "cwd": "C:\\Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/12/26 14:08:20",
- "timestampMillis": "1778591300614",
+ "dateTimestamp": "05/19/26 16:42:13",
+ "timestampMillis": "1779205333300",
  "status": {
-  "cmdId": "40e79c9b-e8f3-4b37-a579-6800437a5067",
+  "cmdId": "6e5464a1-c91b-4fe8-98aa-1a587bb6c2f1",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "05/12/26 14:08:24",
- "timestampMillis": "1778591304416",
+ "dateTimestamp": "05/19/26 16:42:17",
+ "timestampMillis": "1779205337702",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -64,7 +64,7 @@
      "uuid": ""
     },
     "sources": [
-     "D:/HWSW\\stream_matmul.cpp"
+     "C:/Users\\rodrigofonseca\\Lab1-FixedPoint\\stream_matmul_fixedPoint.cpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -73,33 +73,33 @@
     "freqUnits": ""
    }
   ],
-  "toolVersion": "2025.1"
+  "toolVersion": "2025.2"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "05/12/26 14:08:24",
- "timestampMillis": "1778591304417",
+ "dateTimestamp": "05/19/26 16:42:17",
+ "timestampMillis": "1779205337703",
  "buildStep": {
-  "cmdId": "ef1f9828-4bd9-4032-8533-3b5de79b6785",
+  "cmdId": "42492d39-977b-4b76-85c9-3ffc36f98172",
   "name": "",
-  "logFile": "D:/HWSW\\hls_component\\stream_matmul\\hls\\hls.log",
+  "logFile": "C:/Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component\\stream_matmul\\hls\\hls.log",
   "commandLine": "",
   "args": [],
   "iniFiles": [],
-  "cwd": "D:\\HWSW\\hls_component"
+  "cwd": "C:\\Users\\rodrigofonseca\\Lab1-FixedPoint\\hls_component"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/12/26 14:08:24",
- "timestampMillis": "1778591304418",
+ "dateTimestamp": "05/19/26 16:42:17",
+ "timestampMillis": "1779205337703",
  "status": {
-  "cmdId": "ef1f9828-4bd9-4032-8533-3b5de79b6785",
+  "cmdId": "42492d39-977b-4b76-85c9-3ffc36f98172",
   "state": "CS_RUNNING"
  }
 }
@@ -107,10 +107,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/12/26 14:08:35",
- "timestampMillis": "1778591315764",
+ "dateTimestamp": "05/19/26 16:42:40",
+ "timestampMillis": "1779205360235",
  "status": {
-  "cmdId": "ef1f9828-4bd9-4032-8533-3b5de79b6785",
+  "cmdId": "42492d39-977b-4b76-85c9-3ffc36f98172",
   "state": "CS_PASSED"
  }
 }
@@ -118,10 +118,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/12/26 14:08:35",
- "timestampMillis": "1778591315843",
+ "dateTimestamp": "05/19/26 16:42:40",
+ "timestampMillis": "1779205360410",
  "status": {
-  "cmdId": "40e79c9b-e8f3-4b37-a579-6800437a5067",
+  "cmdId": "6e5464a1-c91b-4fe8-98aa-1a587bb6c2f1",
   "state": "CS_PASSED"
  }
 }
@@ -129,8 +129,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/12/26 14:08:35",
- "timestampMillis": "1778591315843",
+ "dateTimestamp": "05/19/26 16:42:40",
+ "timestampMillis": "1779205360411",
  "report": {
   "path": "",
   "name": "",
@@ -143,8 +143,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/12/26 14:08:35",
- "timestampMillis": "1778591315843",
+ "dateTimestamp": "05/19/26 16:42:40",
+ "timestampMillis": "1779205360413",
  "report": {
   "path": "",
   "name": "",

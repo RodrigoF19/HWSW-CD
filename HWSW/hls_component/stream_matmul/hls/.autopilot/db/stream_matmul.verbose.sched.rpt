@@ -3,9 +3,9 @@
 ================================================================
 == Vitis HLS Report for 'stream_matmul'
 ================================================================
-* Date:           Tue May 12 13:33:22 2026
+* Date:           Tue May 19 17:15:01 2026
 
-* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        stream_matmul
 * Solution:       hls (Vivado IP Flow Target)
 * Product family: zynq
@@ -20,29 +20,31 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.060 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    88667|    88667|  0.887 ms|  0.887 ms|  88668|  88668|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+-----------+----------+------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max   |  min |   max  |   Type  |
+    +---------+---------+-----------+----------+------+--------+---------+
+    |     6453|   380106|  64.530 us|  3.801 ms|  6454|  380107|       no|
+    +---------+---------+-----------+----------+------+--------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
-        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_63_3  |    88144|    88144|     22036|          -|          -|     4|        no|
-        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        +----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- k_tile_loop   |     5931|   379584|      5931|          -|          -|  1 ~ 64|        no|
+        | + compute_i    |     5408|     5408|       338|          -|          -|      16|        no|
+        |  ++ compute_j  |      336|      336|        21|          -|          -|      16|        no|
+        +----------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -70,88 +72,160 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 10
+* Number of FSM states : 14
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
 2 --> 3 
-3 --> 4 9 
+3 --> 4 13 
 4 --> 5 
 5 --> 6 
 6 --> 7 
-7 --> 8 
-8 --> 3 
+7 --> 8 3 
+8 --> 9 7 
 9 --> 10 
-10 --> 
+10 --> 11 
+11 --> 12 
+12 --> 8 
+13 --> 14 
+14 --> 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 1.58>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%kk = alloca i32 1" [../stream_matmul.cpp:52]   --->   Operation 11 'alloca' 'kk' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%A = alloca i64 1" [../stream_matmul.cpp:45]   --->   Operation 12 'alloca' 'A' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%A_1 = alloca i64 1" [../stream_matmul.cpp:45]   --->   Operation 13 'alloca' 'A_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%A_2 = alloca i64 1" [../stream_matmul.cpp:45]   --->   Operation 14 'alloca' 'A_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%A_3 = alloca i64 1" [../stream_matmul.cpp:45]   --->   Operation 15 'alloca' 'A_3' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%B = alloca i64 1" [../stream_matmul.cpp:46]   --->   Operation 16 'alloca' 'B' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%B_1 = alloca i64 1" [../stream_matmul.cpp:46]   --->   Operation 17 'alloca' 'B_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%B_2 = alloca i64 1" [../stream_matmul.cpp:46]   --->   Operation 18 'alloca' 'B_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%B_3 = alloca i64 1" [../stream_matmul.cpp:46]   --->   Operation 19 'alloca' 'B_3' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%C = alloca i64 1" [../stream_matmul.cpp:47]   --->   Operation 20 'alloca' 'C' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2, i32 %C"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
-ST_1 : Operation 22 [1/1] (1.58ns)   --->   "%store_ln52 = store i3 0, i3 %kk" [../stream_matmul.cpp:52]   --->   Operation 22 'store' 'store_ln52' <Predicate = true> <Delay = 1.58>
+State 1 <SV = 0> <Delay = 4.51>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%kk = alloca i32 1"   --->   Operation 15 'alloca' 'kk' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.00ns)   --->   "%num_k_tiles_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %num_k_tiles"   --->   Operation 16 'read' 'num_k_tiles_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%acc_1_loc = alloca i64 1"   --->   Operation 17 'alloca' 'acc_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%A = alloca i64 1" [../stream_matmul_fixedPoint.cpp:76]   --->   Operation 18 'alloca' 'A' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%A_1 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:76]   --->   Operation 19 'alloca' 'A_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%A_2 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:76]   --->   Operation 20 'alloca' 'A_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%A_3 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:76]   --->   Operation 21 'alloca' 'A_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%B = alloca i64 1" [../stream_matmul_fixedPoint.cpp:77]   --->   Operation 22 'alloca' 'B' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%B_1 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:77]   --->   Operation 23 'alloca' 'B_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%B_2 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:77]   --->   Operation 24 'alloca' 'B_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%B_3 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:77]   --->   Operation 25 'alloca' 'B_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%C = alloca i64 1" [../stream_matmul_fixedPoint.cpp:78]   --->   Operation 26 'alloca' 'C' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%C_1 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:78]   --->   Operation 27 'alloca' 'C_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%C_2 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:78]   --->   Operation 28 'alloca' 'C_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%C_3 = alloca i64 1" [../stream_matmul_fixedPoint.cpp:78]   --->   Operation 29 'alloca' 'C_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_init_c_i_init_c_j, i32 %C, i32 %C_1, i32 %C_2, i32 %C_3"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %num_k_tiles_read, i32 1, i32 31"   --->   Operation 31 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (2.52ns)   --->   "%icmp = icmp_sgt  i31 %tmp, i31 0"   --->   Operation 32 'icmp' 'icmp' <Predicate = true> <Delay = 2.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node select_ln112)   --->   "%xor_ln112 = xor i32 %num_k_tiles_read, i32 4294967295" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 33 'xor' 'xor_ln112' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln112 = select i1 %icmp, i32 %xor_ln112, i32 4294967294" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 34 'select' 'select_ln112' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %kk"   --->   Operation 35 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%spectopmodule_ln38 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6" [../stream_matmul.cpp:38]   --->   Operation 23 'spectopmodule' 'spectopmodule_ln38' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %in_stream_V_data_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %in_stream_V_keep_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %in_stream_V_strb_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %in_stream_V_last_V"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %out_stream_V_data_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %out_stream_V_keep_V"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %out_stream_V_strb_V"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %out_stream_V_last_V"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln55 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 0, i1 %out_stream_V_last_V, i1 0, i1 0, void @empty_4" [../stream_matmul.cpp:55]   --->   Operation 35 'specaxissidechannel' 'specaxissidechannel_ln55' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln55 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 0, i1 %in_stream_V_last_V, i1 0, i1 0, void @empty_5" [../stream_matmul.cpp:55]   --->   Operation 36 'specaxissidechannel' 'specaxissidechannel_ln55' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2, i32 %C"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
-ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln63 = br void %VITIS_LOOP_66_4" [../stream_matmul.cpp:63]   --->   Operation 38 'br' 'br_ln63' <Predicate = true> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 3.54>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%spectopmodule_ln67 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8" [../stream_matmul_fixedPoint.cpp:67]   --->   Operation 36 'spectopmodule' 'spectopmodule_ln67' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %in_stream_V_data_V"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %in_stream_V_keep_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %in_stream_V_strb_V"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %in_stream_V_last_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %out_stream_V_data_V"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %out_stream_V_keep_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %out_stream_V_strb_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %out_stream_V_last_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %num_k_tiles"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %num_k_tiles, void @empty_2, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_4, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %num_k_tiles, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln100 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 0, i1 %out_stream_V_last_V, i1 0, i1 0, void @empty_6" [../stream_matmul_fixedPoint.cpp:100]   --->   Operation 51 'specaxissidechannel' 'specaxissidechannel_ln100' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln100 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 0, i1 %in_stream_V_last_V, i1 0, i1 0, void @empty_7" [../stream_matmul_fixedPoint.cpp:100]   --->   Operation 52 'specaxissidechannel' 'specaxissidechannel_ln100' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_init_c_i_init_c_j, i32 %C, i32 %C_1, i32 %C_2, i32 %C_3"   --->   Operation 53 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 54 [1/1] (2.55ns)   --->   "%empty = icmp_sgt  i32 %select_ln112, i32 4294967231" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 54 'icmp' 'empty' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node select_ln112_1)   --->   "%xor_ln112_1 = xor i32 %select_ln112, i32 4294967295" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 55 'xor' 'xor_ln112_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln112_1 = select i1 %empty, i32 %xor_ln112_1, i32 64" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 56 'select' 'select_ln112_1' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln112 = br void %read_a_i" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 57 'br' 'br_ln112' <Predicate = true> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 5.42>
-ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%kk_1 = load i3 %kk" [../stream_matmul.cpp:63]   --->   Operation 39 'load' 'kk_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (1.65ns)   --->   "%icmp_ln63 = icmp_eq  i3 %kk_1, i3 4" [../stream_matmul.cpp:63]   --->   Operation 40 'icmp' 'icmp_ln63' <Predicate = true> <Delay = 1.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 41 [1/1] (1.65ns)   --->   "%kk_2 = add i3 %kk_1, i3 1" [../stream_matmul.cpp:63]   --->   Operation 41 'add' 'kk_2' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln63 = br i1 %icmp_ln63, void %VITIS_LOOP_66_4.split, void %for.body88.preheader" [../stream_matmul.cpp:63]   --->   Operation 42 'br' 'br_ln63' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 43 [2/2] (3.77ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5, i32 %A, i32 %A_1, i32 %A_2, i32 %A_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 43 'call' 'call_ln0' <Predicate = (!icmp_ln63)> <Delay = 3.77> <CoreType = "Generic">   --->   Generic Core
-ST_3 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln52 = store i3 %kk_2, i3 %kk" [../stream_matmul.cpp:52]   --->   Operation 44 'store' 'store_ln52' <Predicate = (!icmp_ln63)> <Delay = 1.58>
-ST_3 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12, i32 %C, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 45 'call' 'call_ln0' <Predicate = (icmp_ln63)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+State 3 <SV = 2> <Delay = 6.32>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%kk_load = load i32 %kk" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 58 'load' 'kk_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (2.55ns)   --->   "%icmp_ln112 = icmp_eq  i32 %kk_load, i32 %select_ln112_1" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 59 'icmp' 'icmp_ln112' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (2.55ns)   --->   "%add_ln112 = add i32 %kk_load, i32 1" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 60 'add' 'add_ln112' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln112 = br i1 %icmp_ln112, void %read_a_i.split, void %for.body96.preheader" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 61 'br' 'br_ln112' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [2/2] (3.77ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_read_a_i_read_a_j, i16 %A, i16 %A_1, i16 %A_2, i16 %A_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 62 'call' 'call_ln0' <Predicate = (!icmp_ln112)> <Delay = 3.77> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 63 [2/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_write_c_i_write_c_j, i32 %C, i32 %C_1, i32 %C_2, i32 %C_3, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 63 'call' 'call_ln0' <Predicate = (icmp_ln112)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5, i32 %A, i32 %A_1, i32 %A_2, i32 %A_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 46 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 64 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_read_a_i_read_a_j, i16 %A, i16 %A_1, i16 %A_2, i16 %A_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 64 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 5 <SV = 4> <Delay = 3.77>
-ST_5 : Operation 47 [2/2] (3.77ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7, i32 %B, i32 %B_1, i32 %B_2, i32 %B_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 47 'call' 'call_ln0' <Predicate = true> <Delay = 3.77> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 65 [2/2] (3.77ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_read_b_i_read_b_j, i16 %B, i16 %B_1, i16 %B_2, i16 %B_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 65 'call' 'call_ln0' <Predicate = true> <Delay = 3.77> <CoreType = "Generic">   --->   Generic Core
 
-State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7, i32 %B, i32 %B_1, i32 %B_2, i32 %B_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 48 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+State 6 <SV = 5> <Delay = 1.58>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%speclooptripcount_ln113 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 64, i64 32" [../stream_matmul_fixedPoint.cpp:113]   --->   Operation 66 'speclooptripcount' 'speclooptripcount_ln113' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 67 'specloopname' 'specloopname_ln112' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_read_b_i_read_b_j, i16 %B, i16 %B_1, i16 %B_2, i16 %B_3, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V"   --->   Operation 68 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 69 [1/1] (1.58ns)   --->   "%br_ln145 = br void %compute_j" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 69 'br' 'br_ln145' <Predicate = true> <Delay = 1.58>
 
-State 7 <SV = 6> <Delay = 0.00>
-ST_7 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10, i32 %A, i32 %A_1, i32 %A_2, i32 %A_3, i32 %B, i32 %B_1, i32 %B_2, i32 %B_3, i32 %C"   --->   Operation 49 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+State 7 <SV = 6> <Delay = 3.36>
+ST_7 : Operation 70 [1/1] (0.00ns)   --->   "%i = phi i5 %add_ln145, void %for.inc85, i5 0, void %read_a_i.split" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 70 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 71 [1/1] (1.78ns)   --->   "%icmp_ln145 = icmp_eq  i5 %i, i5 16" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 71 'icmp' 'icmp_ln145' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 72 [1/1] (1.78ns)   --->   "%add_ln145 = add i5 %i, i5 1" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 72 'add' 'add_ln145' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln145 = br i1 %icmp_ln145, void %compute_j.split, void %for.inc88" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 73 'br' 'br_ln145' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln145 = trunc i5 %i" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 74 'trunc' 'trunc_ln145' <Predicate = (!icmp_ln145)> <Delay = 0.00>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%speclooptripcount_ln84 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16" [../stream_matmul_fixedPoint.cpp:84]   --->   Operation 75 'speclooptripcount' 'speclooptripcount_ln84' <Predicate = (!icmp_ln145)> <Delay = 0.00>
+ST_7 : Operation 76 [1/1] (0.00ns)   --->   "%specloopname_ln145 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 76 'specloopname' 'specloopname_ln145' <Predicate = (!icmp_ln145)> <Delay = 0.00>
+ST_7 : Operation 77 [1/1] (1.58ns)   --->   "%br_ln147 = br void %compute_k" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 77 'br' 'br_ln147' <Predicate = (!icmp_ln145)> <Delay = 1.58>
+ST_7 : Operation 78 [1/1] (1.58ns)   --->   "%store_ln112 = store i32 %add_ln112, i32 %kk" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 78 'store' 'store_ln112' <Predicate = (icmp_ln145)> <Delay = 1.58>
+ST_7 : Operation 79 [1/1] (0.00ns)   --->   "%br_ln112 = br void %read_a_i" [../stream_matmul_fixedPoint.cpp:112]   --->   Operation 79 'br' 'br_ln112' <Predicate = (icmp_ln145)> <Delay = 0.00>
 
-State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 50 [1/1] (0.00ns)   --->   "%speclooptripcount_ln52 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [../stream_matmul.cpp:52]   --->   Operation 50 'speclooptripcount' 'speclooptripcount_ln52' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%specloopname_ln63 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [../stream_matmul.cpp:63]   --->   Operation 51 'specloopname' 'specloopname_ln63' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 52 [1/2] (0.00ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10, i32 %A, i32 %A_1, i32 %A_2, i32 %A_3, i32 %B, i32 %B_1, i32 %B_2, i32 %B_3, i32 %C"   --->   Operation 52 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
-ST_8 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln63 = br void %VITIS_LOOP_66_4" [../stream_matmul.cpp:63]   --->   Operation 53 'br' 'br_ln63' <Predicate = true> <Delay = 0.00>
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%j = phi i5 0, void %compute_j.split, i5 %add_ln147, void %arrayidx612.exit" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 80 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (1.78ns)   --->   "%icmp_ln147 = icmp_eq  i5 %j, i5 16" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 81 'icmp' 'icmp_ln147' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 82 [1/1] (1.78ns)   --->   "%add_ln147 = add i5 %j, i5 1" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 82 'add' 'add_ln147' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln147 = br i1 %icmp_ln147, void %compute_k.split, void %for.inc85" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 83 'br' 'br_ln147' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%lshr_ln84_3 = partselect i2 @_ssdm_op_PartSelect.i2.i5.i32.i32, i5 %j, i32 2, i32 3" [../stream_matmul_fixedPoint.cpp:84]   --->   Operation 84 'partselect' 'lshr_ln84_3' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %trunc_ln145, i2 %lshr_ln84_3" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 85 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln148 = zext i6 %tmp_s" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 86 'zext' 'zext_ln148' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%C_addr = getelementptr i32 %C, i64 0, i64 %zext_ln148" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 87 'getelementptr' 'C_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%C_1_addr = getelementptr i32 %C_1, i64 0, i64 %zext_ln148" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 88 'getelementptr' 'C_1_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%C_2_addr = getelementptr i32 %C_2, i64 0, i64 %zext_ln148" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 89 'getelementptr' 'C_2_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%C_3_addr = getelementptr i32 %C_3, i64 0, i64 %zext_ln148" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 90 'getelementptr' 'C_3_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_8 : Operation 91 [2/2] (3.25ns)   --->   "%C_load = load i6 %C_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 91 'load' 'C_load' <Predicate = (!icmp_ln147)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 92 [2/2] (3.25ns)   --->   "%C_1_load = load i6 %C_1_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 92 'load' 'C_1_load' <Predicate = (!icmp_ln147)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 93 [2/2] (3.25ns)   --->   "%C_2_load = load i6 %C_2_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 93 'load' 'C_2_load' <Predicate = (!icmp_ln147)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 94 [2/2] (3.25ns)   --->   "%C_3_load = load i6 %C_3_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 94 'load' 'C_3_load' <Predicate = (!icmp_ln147)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln145 = br void %compute_j" [../stream_matmul_fixedPoint.cpp:145]   --->   Operation 95 'br' 'br_ln145' <Predicate = (icmp_ln147)> <Delay = 0.00>
 
-State 9 <SV = 3> <Delay = 4.54>
-ST_9 : Operation 54 [1/2] (4.54ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12, i32 %C, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 54 'call' 'call_ln0' <Predicate = true> <Delay = 4.54> <CoreType = "Generic">   --->   Generic Core
+State 9 <SV = 8> <Delay = 5.08>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%trunc_ln147 = trunc i5 %j" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 96 'trunc' 'trunc_ln147' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 97 [1/1] (0.00ns)   --->   "%trunc_ln147_1 = trunc i5 %j" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 97 'trunc' 'trunc_ln147_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 98 [1/2] ( I:3.25ns O:3.25ns )   --->   "%C_load = load i6 %C_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 98 'load' 'C_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 99 [1/2] ( I:3.25ns O:3.25ns )   --->   "%C_1_load = load i6 %C_1_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 99 'load' 'C_1_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 100 [1/2] ( I:3.25ns O:3.25ns )   --->   "%C_2_load = load i6 %C_2_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 100 'load' 'C_2_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 101 [1/2] ( I:3.25ns O:3.25ns )   --->   "%C_3_load = load i6 %C_3_addr" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 101 'load' 'C_3_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 102 [1/1] (1.82ns)   --->   "%acc = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4i32.i32.i2, i2 0, i32 %C_load, i2 1, i32 %C_1_load, i2 2, i32 %C_2_load, i2 3, i32 %C_3_load, i32 0, i2 %trunc_ln147_1" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 102 'sparsemux' 'acc' <Predicate = true> <Delay = 1.82> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 137 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
 
-State 10 <SV = 4> <Delay = 0.00>
-ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%ret_ln105 = ret" [../stream_matmul.cpp:105]   --->   Operation 55 'ret' 'ret_ln105' <Predicate = true> <Delay = 0.00>
+State 10 <SV = 9> <Delay = 3.25>
+ST_10 : Operation 103 [2/2] (3.25ns)   --->   "%call_ln148 = call void @stream_matmul_Pipeline_compute_k, i32 %acc, i4 %trunc_ln145, i16 %A, i16 %A_1, i16 %A_2, i16 %A_3, i4 %trunc_ln147, i16 %B, i16 %B_1, i16 %B_2, i16 %B_3, i32 %acc_1_loc" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 103 'call' 'call_ln148' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 104 [1/2] (0.00ns)   --->   "%call_ln148 = call void @stream_matmul_Pipeline_compute_k, i32 %acc, i4 %trunc_ln145, i16 %A, i16 %A_1, i16 %A_2, i16 %A_3, i4 %trunc_ln147, i16 %B, i16 %B_1, i16 %B_2, i16 %B_3, i32 %acc_1_loc" [../stream_matmul_fixedPoint.cpp:148]   --->   Operation 104 'call' 'call_ln148' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 11> <Delay = 4.81>
+ST_12 : Operation 105 [1/1] (0.00ns)   --->   "%speclooptripcount_ln84 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16" [../stream_matmul_fixedPoint.cpp:84]   --->   Operation 105 'speclooptripcount' 'speclooptripcount_ln84' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 106 [1/1] (0.00ns)   --->   "%specloopname_ln147 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 106 'specloopname' 'specloopname_ln147' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 107 [1/1] (0.00ns)   --->   "%acc_1_loc_load = load i32 %acc_1_loc"   --->   Operation 107 'load' 'acc_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 108 [1/1] (1.56ns)   --->   "%switch_ln156 = switch i2 %trunc_ln147_1, void %arrayidx612.case.3, i2 0, void %arrayidx612.case.0, i2 1, void %arrayidx612.case.1, i2 2, void %arrayidx612.case.2" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 108 'switch' 'switch_ln156' <Predicate = true> <Delay = 1.56>
+ST_12 : Operation 109 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln156 = store i32 %acc_1_loc_load, i6 %C_2_addr" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 109 'store' 'store_ln156' <Predicate = (trunc_ln147_1 == 2)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln156 = br void %arrayidx612.exit" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 110 'br' 'br_ln156' <Predicate = (trunc_ln147_1 == 2)> <Delay = 0.00>
+ST_12 : Operation 111 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln156 = store i32 %acc_1_loc_load, i6 %C_1_addr" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 111 'store' 'store_ln156' <Predicate = (trunc_ln147_1 == 1)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln156 = br void %arrayidx612.exit" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 112 'br' 'br_ln156' <Predicate = (trunc_ln147_1 == 1)> <Delay = 0.00>
+ST_12 : Operation 113 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln156 = store i32 %acc_1_loc_load, i6 %C_addr" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 113 'store' 'store_ln156' <Predicate = (trunc_ln147_1 == 0)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 114 [1/1] (0.00ns)   --->   "%br_ln156 = br void %arrayidx612.exit" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 114 'br' 'br_ln156' <Predicate = (trunc_ln147_1 == 0)> <Delay = 0.00>
+ST_12 : Operation 115 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln156 = store i32 %acc_1_loc_load, i6 %C_3_addr" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 115 'store' 'store_ln156' <Predicate = (trunc_ln147_1 == 3)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln156 = br void %arrayidx612.exit" [../stream_matmul_fixedPoint.cpp:156]   --->   Operation 116 'br' 'br_ln156' <Predicate = (trunc_ln147_1 == 3)> <Delay = 0.00>
+ST_12 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln147 = br void %compute_k" [../stream_matmul_fixedPoint.cpp:147]   --->   Operation 117 'br' 'br_ln147' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 3> <Delay = 6.37>
+ST_13 : Operation 118 [1/2] (6.37ns)   --->   "%call_ln0 = call void @stream_matmul_Pipeline_write_c_i_write_c_j, i32 %C, i32 %C_1, i32 %C_2, i32 %C_3, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 118 'call' 'call_ln0' <Predicate = true> <Delay = 6.37> <CoreType = "Generic">   --->   Generic Core
+
+State 14 <SV = 4> <Delay = 0.00>
+ST_14 : Operation 119 [1/1] (0.00ns)   --->   "%ret_ln174 = ret" [../stream_matmul_fixedPoint.cpp:174]   --->   Operation 119 'ret' 'ret_ln174' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -159,41 +233,69 @@ ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%ret_ln105 = ret" [../stream_matmu
 ============================================================
 Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
- <State 1>: 1.588ns
+ <State 1>: 4.515ns
 The critical path consists of the following:
-	'alloca' operation 3 bit ('kk', ../stream_matmul.cpp:52) [9]  (0.000 ns)
-	'store' operation 0 bit ('store_ln52', ../stream_matmul.cpp:52) of constant 0 on local variable 'kk', ../stream_matmul.cpp:52 [34]  (1.588 ns)
+	s_axi read operation ('num_k_tiles_read') on port 'num_k_tiles' [11]  (1.000 ns)
+	'icmp' operation 1 bit ('icmp') [44]  (2.522 ns)
+	'select' operation 32 bit ('select_ln112', ../stream_matmul_fixedPoint.cpp:112) [46]  (0.993 ns)
 
- <State 2>: 0.000ns
+ <State 2>: 3.545ns
 The critical path consists of the following:
+	'icmp' operation 1 bit ('empty', ../stream_matmul_fixedPoint.cpp:112) [47]  (2.552 ns)
+	'select' operation 32 bit ('select_ln112_1', ../stream_matmul_fixedPoint.cpp:112) [49]  (0.993 ns)
 
- <State 3>: 5.422ns
+ <State 3>: 6.324ns
 The critical path consists of the following:
-	'load' operation 3 bit ('kk', ../stream_matmul.cpp:63) on local variable 'kk', ../stream_matmul.cpp:52 [37]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln63', ../stream_matmul.cpp:63) [38]  (1.650 ns)
-	'call' operation 0 bit ('call_ln0') to 'stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5' [44]  (3.772 ns)
+	'load' operation 32 bit ('kk_load', ../stream_matmul_fixedPoint.cpp:112) on local variable 'kk' [53]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln112', ../stream_matmul_fixedPoint.cpp:112) [54]  (2.552 ns)
+	'call' operation ('call_ln0') to 'stream_matmul_Pipeline_read_a_i_read_a_j' [60]  (3.772 ns)
 
  <State 4>: 0.000ns
 The critical path consists of the following:
 
  <State 5>: 3.772ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln0') to 'stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7' [45]  (3.772 ns)
+	'call' operation ('call_ln0') to 'stream_matmul_Pipeline_read_b_i_read_b_j' [61]  (3.772 ns)
 
- <State 6>: 0.000ns
+ <State 6>: 1.588ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 5 bit ('i', ../stream_matmul_fixedPoint.cpp:145) with incoming values : ('add_ln145', ../stream_matmul_fixedPoint.cpp:145) [64]  (1.588 ns)
+	'br' operation ('br_ln145', ../stream_matmul_fixedPoint.cpp:145) [62]  (1.588 ns)
+
+ <State 7>: 3.368ns
+The critical path consists of the following:
+	'phi' operation 5 bit ('i', ../stream_matmul_fixedPoint.cpp:145) with incoming values : ('add_ln145', ../stream_matmul_fixedPoint.cpp:145) [64]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln145', ../stream_matmul_fixedPoint.cpp:145) [65]  (1.780 ns)
+	blocking operation 1.588 ns on control path)
+
+ <State 8>: 3.254ns
+The critical path consists of the following:
+	'phi' operation 5 bit ('j', ../stream_matmul_fixedPoint.cpp:147) with incoming values : ('add_ln147', ../stream_matmul_fixedPoint.cpp:147) [74]  (0.000 ns)
+	'getelementptr' operation 6 bit ('C_addr', ../stream_matmul_fixedPoint.cpp:148) [86]  (0.000 ns)
+	'load' operation 32 bit ('C_load', ../stream_matmul_fixedPoint.cpp:148) on array 'C', ../stream_matmul_fixedPoint.cpp:78 [90]  (3.254 ns)
+
+ <State 9>: 5.081ns
+The critical path consists of the following:
+	'load' operation 32 bit ('C_load', ../stream_matmul_fixedPoint.cpp:148) on array 'C', ../stream_matmul_fixedPoint.cpp:78 [90]  (3.254 ns)
+	'sparsemux' operation 32 bit ('acc', ../stream_matmul_fixedPoint.cpp:148) [94]  (1.827 ns)
+
+ <State 10>: 3.254ns
+The critical path consists of the following:
+	'call' operation ('call_ln148', ../stream_matmul_fixedPoint.cpp:148) to 'stream_matmul_Pipeline_compute_k' [95]  (3.254 ns)
+
+ <State 11>: 0.000ns
 The critical path consists of the following:
 
- <State 7>: 0.000ns
+ <State 12>: 4.819ns
 The critical path consists of the following:
+	'store' operation ('store_ln156', ../stream_matmul_fixedPoint.cpp:156) of variable 'acc_1_loc_load' 32 bit on array 'C', ../stream_matmul_fixedPoint.cpp:78 [99]  (3.254 ns)
+	blocking operation 1.565 ns on control path)
 
- <State 8>: 0.000ns
+ <State 13>: 6.371ns
 The critical path consists of the following:
+	'call' operation ('call_ln0') to 'stream_matmul_Pipeline_write_c_i_write_c_j' [118]  (6.371 ns)
 
- <State 9>: 4.544ns
-The critical path consists of the following:
-	'call' operation 0 bit ('call_ln0') to 'stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12' [50]  (4.544 ns)
-
- <State 10>: 0.000ns
+ <State 14>: 0.000ns
 The critical path consists of the following:
 
 
@@ -215,6 +317,10 @@ N/A
 	State 8
 	State 9
 	State 10
+	State 11
+	State 12
+	State 13
+	State 14
 
 
 ============================================================

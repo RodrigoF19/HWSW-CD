@@ -1,0 +1,20 @@
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:2386:5: remark: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_676_1: 
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:2386:5: note: FIX-IT applied suggested code changes
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:2400:5: remark: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_690_1: 
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:2400:5: note: FIX-IT applied suggested code changes
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:2414:5: remark: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_704_1: 
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:2414:5: note: FIX-IT applied suggested code changes
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:5934:7: remark: Added loop label VITIS_LOOP_1251_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^
+      VITIS_LOOP_1251_1: 
+C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp:5934:7: note: FIX-IT applied suggested code changes

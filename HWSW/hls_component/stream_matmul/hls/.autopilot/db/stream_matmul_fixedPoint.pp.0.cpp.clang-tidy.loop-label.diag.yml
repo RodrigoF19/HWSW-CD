@@ -1,0 +1,52 @@
+---
+MainSourceFile:  'C:/Users/rodrigofonseca/Lab1-FixedPoint/hls_component/stream_matmul/hls/.autopilot/db/stream_matmul_fixedPoint.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp'
+          Offset:          284172
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp'
+          Offset:          284643
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp'
+          Offset:          285115
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component\stream_matmul\hls\.autopilot\db\stream_matmul_fixedPoint.pp.0.cpp'
+          Offset:          630511
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\rodrigofonseca\Lab1-FixedPoint\hls_component'
+...

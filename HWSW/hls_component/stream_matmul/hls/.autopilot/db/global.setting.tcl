@@ -9,7 +9,7 @@ set PipelineFlag 0
 set DataflowTaskPipelineFlag 1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
-set FloatingPointFlag 1
+set FloatingPointFlag 0
 set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
@@ -30,23 +30,20 @@ set ExtraCLdFlags {}
 set SynCheckOptions {}
 set PresynOptions {}
 set PreprocOptions {}
-set SchedOptions {}
-set BindOptions {}
-set RtlGenOptions {}
 set RtlWriterOptions {}
-set CbcGenFlag {}
-set CasGenFlag {}
-set CasMonitorFlag {}
+set CbcGenFlag 0
+set CasGenFlag 0
+set CasMonitorFlag 0
 set AutoSimOptions {}
 set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z010:-clg400:-1
-set SourceFiles {sc {} c ../../../stream_matmul.cpp}
+set SourceFiles {sc {} c ../../../stream_matmul_fixedPoint.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog D:/HWSW/tb_stream_matmul.cpp bc D:/HWSW/tb_stream_matmul.cpp vhdl D:/HWSW/tb_stream_matmul.cpp sc D:/HWSW/tb_stream_matmul.cpp cas D:/HWSW/tb_stream_matmul.cpp c {}}
+set TBFiles {verilog C:/Users/rodrigofonseca/Lab1-FixedPoint/tb_stream_matmul_fixedPoint.cpp bc C:/Users/rodrigofonseca/Lab1-FixedPoint/tb_stream_matmul_fixedPoint.cpp vhdl C:/Users/rodrigofonseca/Lab1-FixedPoint/tb_stream_matmul_fixedPoint.cpp sc C:/Users/rodrigofonseca/Lab1-FixedPoint/tb_stream_matmul_fixedPoint.cpp cas C:/Users/rodrigofonseca/Lab1-FixedPoint/tb_stream_matmul_fixedPoint.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

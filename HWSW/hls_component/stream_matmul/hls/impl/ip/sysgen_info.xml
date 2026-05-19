@@ -61,6 +61,91 @@
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_ARADDR</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_ARREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_ARVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_AWADDR</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_AWREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_AWVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_BREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_BRESP</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_BVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_RDATA</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_RREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_RRESP</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_RVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_WDATA</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_WREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_WSTRB</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_control_WVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>10</clk_period>
@@ -68,7 +153,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>88667</latency>
-    <II>88668</II>
+    <latency>6453</latency>
+    <II>6454 ~ 380107</II>
   </modelParameters>
 </AdditionalInfo>

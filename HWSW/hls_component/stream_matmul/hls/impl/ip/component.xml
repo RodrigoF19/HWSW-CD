@@ -153,7 +153,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_CONTROL.ADDR_WIDTH">4</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_CONTROL.ADDR_WIDTH">5</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
@@ -659,6 +659,29 @@
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
+        <spirit:register>
+          <spirit:name>num_k_tiles</spirit:name>
+          <spirit:displayName>num_k_tiles</spirit:displayName>
+          <spirit:description>Data signal of num_k_tiles</spirit:description>
+          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>num_k_tiles</spirit:name>
+            <spirit:description>Bit 31 to 0 of num_k_tiles</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
       </spirit:addressBlock>
     </spirit:memoryMap>
   </spirit:memoryMaps>
@@ -671,15 +694,12 @@
         <spirit:language>verilog</spirit:language>
         <spirit:modelName>stream_matmul</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>56165879</spirit:value>
+            <spirit:value>2ad023e8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -690,15 +710,12 @@
         <spirit:language>verilog</spirit:language>
         <spirit:modelName>stream_matmul</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5af0046c</spirit:value>
+            <spirit:value>0e7e627a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -709,15 +726,12 @@
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>stream_matmul</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlsynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>aea88db9</spirit:value>
+            <spirit:value>4ff64f68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -728,15 +742,12 @@
         <spirit:language>vhdl</spirit:language>
         <spirit:modelName>stream_matmul</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c399751e</spirit:value>
+            <spirit:value>3eaae3d2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -750,7 +761,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9685b7dd</spirit:value>
+            <spirit:value>48440817</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -786,7 +797,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5fecd259</spirit:value>
+            <spirit:value>7def6149</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -811,7 +822,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -854,7 +865,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH&apos;)) - 1)">4</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1295,7 +1306,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>C_S_AXI_CONTROL_ADDR_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_CONTROL_ADDR_WIDTH">5</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_CONTROL_DATA_WIDTH</spirit:name>
@@ -1312,14 +1323,6 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul_A_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1332,15 +1335,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul_flow_control_loop_pipe_sequential_init.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1352,55 +1347,45 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/stream_matmul_mul_16s_16s_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_sparsemux_9_2_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_compute_k.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_init_c_i_init_c_j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_read_a_i_read_a_j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_read_b_i_read_b_j.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_write_c_i_write_c_j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul_A_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1416,17 +1401,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul_flow_control_loop_pipe_sequential_init.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1441,32 +1416,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/stream_matmul_mul_16s_16s_32_1_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/stream_matmul_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_sparsemux_9_2_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_compute_k.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_init_c_i_init_c_j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_read_a_i_read_a_j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12.v</spirit:name>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_read_b_i_read_b_j.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/stream_matmul_stream_matmul_Pipeline_write_c_i_write_c_j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1475,16 +1460,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
@@ -1494,14 +1469,6 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/stream_matmul_A_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1514,15 +1481,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/stream_matmul_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_mul_16s_16s_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1530,52 +1493,38 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_sparsemux_9_2_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_compute_k.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_init_c_i_init_c_j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_read_a_i_read_a_j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_read_b_i_read_b_j.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_write_c_i_write_c_j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/stream_matmul.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e434ed18</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_78742a1c</spirit:userFileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/stream_matmul_A_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1591,17 +1540,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_fadd_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/stream_matmul_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_fmul_32ns_32ns_32_4_max_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_mul_16s_16s_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1611,27 +1555,32 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_55_1_VITIS_LOOP_56_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_sparsemux_9_2_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_66_4_VITIS_LOOP_67_5.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_compute_k.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_74_6_VITIS_LOOP_75_7.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_init_c_i_init_c_j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_83_8_VITIS_LOOP_84_9_VITIS_LOOP_87_10.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_read_a_i_read_a_j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_VITIS_LOOP_98_11_VITIS_LOOP_99_12.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_read_b_i_read_b_j.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/stream_matmul_stream_matmul_Pipeline_write_c_i_write_c_j.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1640,16 +1589,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
@@ -1713,7 +1652,7 @@
       <spirit:file>
         <spirit:name>xgui/stream_matmul_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5fecd259</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_7def6149</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1746,11 +1685,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">88667</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">6453</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">88668</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">6454 ~ 380107</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1763,21 +1702,21 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Stream_matmul</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114605629</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-05-12T13:09:24Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114615895</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-05-19T16:15:47Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
       </xilinx:sdxKernelAttributes>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="443b8b00"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="a57fbd37"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="752b43a2"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="c5d299a2"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="23754c13"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="cfd1be62"/>
+      <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f2de2cd0"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f4112ddd"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="69e8c27e"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="e50e4493"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="c36ad1dc"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="3667d007"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
